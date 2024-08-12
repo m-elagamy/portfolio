@@ -12,60 +12,64 @@ const ParticlesBackground = () => {
   useEffect(() => {
     if (particlesContainer.current) {
       const initParticles = async () => {
-        await particlesInit(window.tsParticles);
-        window.tsParticles.load({
-          id: particlesContainer.current?.id,
-          options: {
-            particles: {
-              number: {
-                value: 50,
-                density: {
-                  enable: true,
-                },
-              },
-              color: {
-                value: ["#fd47b4", "#3bb5e6"],
-              },
-              shape: {
-                type: ["circle", "triangle", "edge", "polygon"],
-                options: {
-                  polygon: {
-                    nb_sides: 5,
+        if (window.tsParticles) {
+          await particlesInit(window.tsParticles);
+          window.tsParticles.load({
+            id: particlesContainer.current?.id,
+            options: {
+              particles: {
+                number: {
+                  value: 50,
+                  density: {
+                    enable: true,
                   },
                 },
-              },
-              opacity: {
-                value: 0.5,
-                animation: {
+                color: {
+                  value: ["#fd47b4", "#3bb5e6"],
+                },
+                shape: {
+                  type: ["circle", "triangle", "edge", "polygon"],
+                  options: {
+                    polygon: {
+                      nb_sides: 5,
+                    },
+                  },
+                },
+                opacity: {
+                  value: 0.5,
+                  animation: {
+                    enable: true,
+                    speed: 1,
+                    sync: false,
+                  },
+                },
+                size: {
+                  value: 3,
+                  animation: {
+                    enable: true,
+                    speed: 1,
+                    sync: false,
+                  },
+                },
+                move: {
                   enable: true,
-                  speed: 1,
-                  sync: false,
+                  speed: 1.5,
+                  direction: "none",
+                  random: false,
+                  straight: false,
+                  outModes: "out",
                 },
               },
-              size: {
-                value: 3,
-                animation: {
-                  enable: true,
-                  speed: 1,
-                  sync: false,
-                },
-              },
-              move: {
+              retina_detect: true,
+              fullScreen: {
                 enable: true,
-                speed: 1.5,
-                direction: "none",
-                random: false,
-                straight: false,
-                outModes: "out",
+                zIndex: 1,
               },
             },
-            retina_detect: true,
-            fullScreen: {
-              enable: true,
-              zIndex: 1,
-            },
-          },
-        });
+          });
+        } else {
+          console.error("tsParticles is not defined");
+        }
       };
 
       initParticles();
