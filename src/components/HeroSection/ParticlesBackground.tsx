@@ -61,7 +61,7 @@ const ParticlesBackground = () => {
             },
             retina_detect: true,
             fullScreen: {
-              enable: true,
+              enable: false,
               zIndex: 1,
             },
           },
@@ -72,7 +72,13 @@ const ParticlesBackground = () => {
     }
   }, [particlesInit]);
 
-  return <div id="tsparticles" ref={particlesContainer}></div>;
+  return (
+    <div
+      id="tsparticles"
+      className="absolute inset-0"
+      ref={particlesContainer}
+    ></div>
+  );
 };
 
 export default ParticlesBackground;

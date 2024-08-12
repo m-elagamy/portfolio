@@ -1,7 +1,9 @@
 import HeroText from "./HeroSectionText";
+import ParticlesBackground from "./ParticlesBackground";
 const Hero = () => {
   return (
-    <section className="hero min-h-screen bg-[#0F0F0F]">
+    <section className="hero relative z-10 min-h-screen bg-[#0F0F0F]">
+      <ParticlesBackground />
       <h2 className="sr-only">Hero Section</h2>
       <div className="container">
         <div className="hero">

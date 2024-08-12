@@ -28,7 +28,7 @@ function SectionsLinks({
   };
   return (
     <motion.ul
-      className="absolute left-0 top-[74px] w-full flex-col items-center bg-[#121212d8] text-center tracking-[0.3em] *:py-3 md:static md:flex md:w-fit md:flex-row md:gap-5 md:bg-transparent md:p-0 md:shadow-none"
+      className="absolute left-0 top-[74px] z-20 w-full flex-col items-center bg-[#121212d8] text-center tracking-[0.3em] *:py-3 md:static md:flex md:w-fit md:flex-row md:gap-5 md:bg-transparent md:p-0 md:shadow-none"
       initial="hidden"
       animate="visible"
       exit={{
