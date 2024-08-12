@@ -1,8 +1,8 @@
 import HeroText from "./HeroSectionText";
-
 const Hero = () => {
   return (
-    <div className="hero min-h-screen bg-[#0F0F0F]">
+    <section className="hero min-h-screen bg-[#0F0F0F]">
+      <h2 className="sr-only">Hero Section</h2>
       <div className="container">
         <div className="hero">
           <div className="hero-content p-0 text-center">
@@ -12,7 +12,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Hero;

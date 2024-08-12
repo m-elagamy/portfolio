@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
 .hero {
   min-height: calc(100vh - 65px);
 }
@@ -10,12 +16,4 @@
   .hero {
     min-height: calc(100vh - 80px);
   }
-}
-
-.links-menu:has(:checked) ul {
-  background-color: #121212d8;
-}
-
-.links-menu:has(:checked) ul li {
-  border-block: 1px solid #6767671e;
 }

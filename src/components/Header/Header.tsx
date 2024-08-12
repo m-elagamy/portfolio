@@ -1,43 +1,18 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+
+// Custom Components
 import SocialLink from "./SocialLink";
+import Logo from "./Logo";
+import SectionsLinks from "./SectionsLinks";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen((prevState) => !prevState);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 1024);
-      if (window.innerWidth >= 1024) setMenuOpen(false);
-    };
-
-    // Initial check
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const menuVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
-  const logoVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
+  const toggleMenu = () => {
+    setMenuOpen((prevState) => !prevState);
   };
 
   const linkVariants = {
@@ -49,54 +24,30 @@ const Header = () => {
     }),
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+      if (window.innerWidth >= 1024) setMenuOpen(false);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <header className="bg-[#0F0F0F] pt-8">
       <div className="container">
         <nav className="flex items-center justify-between text-[#fbfbfc99]">
-          <motion.a
-            href="/"
-            variants={logoVariants}
-            initial="hidden"
-            animate="visible"
-            className="flex items-center gap-2 text-2xl font-bold"
-          >
-            <span className="bg-gradient-to-r from-[#fd47b4] to-[#3bb5e6] bg-clip-text font-mono font-bold text-transparent">
-              &lt;/&gt;
-            </span>
-            <h2 className="hidden text-lg tracking-widest text-slate-300 md:block">
-              AGAMY
-            </h2>
-          </motion.a>
+          <Logo />
           <div className="links-menu flex items-center gap-7">
             <AnimatePresence>
               {(isMenuOpen || isLargeScreen) && (
-                <motion.ul
-                  className="absolute left-0 top-[74px] w-full flex-col items-center text-center tracking-[0.3em] shadow-lg *:py-3 md:static md:flex md:w-fit md:flex-row md:gap-5 md:p-0 md:shadow-none"
-                  initial="hidden"
-                  animate="visible"
-                  exit={{ opacity: 0, y: -20, transition: { duration: 0.4 } }}
-                  variants={menuVariants}
-                >
-                  {["ABOUT", "PROJECTS", "CONTACT"].map((link, index) => (
-                    <motion.li
-                      key={link}
-                      custom={index}
-                      variants={linkVariants}
-                      initial="hidden"
-                      animate="visible"
-                    >
-                      <a
-                        href={`#${link.toLowerCase()}`}
-                        className="relative transition-all duration-200 before:absolute before:top-full before:h-[2px] before:w-full before:scale-x-0 before:rounded before:bg-gradient-to-r before:from-[#fd47b4] before:to-[#3bb5e6] before:transition-all before:duration-200 hover:text-slate-100 hover:before:scale-x-100"
-                      >
-                        {link}
-                      </a>
-                    </motion.li>
-                  ))}
-                </motion.ul>
+                <SectionsLinks
+                  linkVariants={linkVariants}
+                  closeMenu={() => setMenuOpen(false)}
+                />
               )}
             </AnimatePresence>
-
             <motion.div
               variants={linkVariants}
               initial="hidden"
