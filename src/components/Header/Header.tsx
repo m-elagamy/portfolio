@@ -30,6 +30,8 @@ const Header = () => {
       if (window.innerWidth >= 1024) setMenuOpen(false);
     };
 
+    handleResize();
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
