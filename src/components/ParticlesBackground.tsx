@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback } from "react";
 import { loadFull } from "tsparticles";
-import { Engine } from "@tsparticles/engine";
+import { Engine, tsParticles } from "@tsparticles/engine";
 
 const ParticlesBackground = () => {
   const particlesContainer = useRef<HTMLDivElement>(null);
@@ -12,64 +12,60 @@ const ParticlesBackground = () => {
   useEffect(() => {
     if (particlesContainer.current) {
       const initParticles = async () => {
-        if (window.tsParticles) {
-          await particlesInit(window.tsParticles);
-          window.tsParticles.load({
-            id: particlesContainer.current?.id,
-            options: {
-              particles: {
-                number: {
-                  value: 50,
-                  density: {
-                    enable: true,
-                  },
-                },
-                color: {
-                  value: ["#fd47b4", "#3bb5e6"],
-                },
-                shape: {
-                  type: ["circle", "triangle", "edge", "polygon"],
-                  options: {
-                    polygon: {
-                      nb_sides: 5,
-                    },
-                  },
-                },
-                opacity: {
-                  value: 0.5,
-                  animation: {
-                    enable: true,
-                    speed: 1,
-                    sync: false,
-                  },
-                },
-                size: {
-                  value: 3,
-                  animation: {
-                    enable: true,
-                    speed: 1,
-                    sync: false,
-                  },
-                },
-                move: {
+        await particlesInit(tsParticles);
+        tsParticles.load({
+          id: particlesContainer.current?.id,
+          options: {
+            particles: {
+              number: {
+                value: 50,
+                density: {
                   enable: true,
-                  speed: 1.5,
-                  direction: "none",
-                  random: false,
-                  straight: false,
-                  outModes: "out",
                 },
               },
-              retina_detect: true,
-              fullScreen: {
+              color: {
+                value: ["#fd47b4", "#3bb5e6"],
+              },
+              shape: {
+                type: ["circle", "triangle", "edge", "polygon"],
+                options: {
+                  polygon: {
+                    nb_sides: 5,
+                  },
+                },
+              },
+              opacity: {
+                value: 0.5,
+                animation: {
+                  enable: true,
+                  speed: 1,
+                  sync: false,
+                },
+              },
+              size: {
+                value: 3,
+                animation: {
+                  enable: true,
+                  speed: 1,
+                  sync: false,
+                },
+              },
+              move: {
                 enable: true,
-                zIndex: 1,
+                speed: 1.5,
+                direction: "none",
+                random: false,
+                straight: false,
+                outModes: "out",
               },
             },
-          });
-        } else {
-          console.error("tsParticles is not defined");
-        }
+            retina_detect: true,
+            fullScreen: {
+              enable: true,
+              zIndex: 1,
+            },
+          },
+        });
       };
 
       initParticles();
