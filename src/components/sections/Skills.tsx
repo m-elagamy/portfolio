@@ -68,7 +68,7 @@ const Skills = () => {
     <AnimatedSection sectionId="skills">
       <h2 className="mx-auto mb-10 flex w-fit flex-col-reverse bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-3xl font-bold tracking-widest text-transparent lg:text-5xl">
         MY TECH STACK
-        <small className="text-base font-medium text-[#727272]">
+        <small className="text-base font-medium text-[#727272] lg:text-lg">
           TECHNOLOGIES & TOOLS I'VE BEEN WORKING WITH
         </small>
       </h2>
