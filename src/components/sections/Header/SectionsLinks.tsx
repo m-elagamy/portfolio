@@ -13,11 +13,9 @@ type SectionsLinksProps = {
   closeMenu: () => void;
 };
 
-function SectionsLinks({
-  linkVariants,
+function SectionsLinks({ linkVariants, closeMenu }: SectionsLinksProps) {
+  const sections = ["ABOUT", "SKILLS", "PROJECTS", "CONTACT"];
 
-  closeMenu,
-}: SectionsLinksProps) {
   const menuVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
@@ -26,6 +24,7 @@ function SectionsLinks({
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
+
   return (
     <motion.ul
       className="absolute left-0 top-[74px] z-20 w-full flex-col items-center bg-[#121212d8] text-center tracking-[0.3em] *:py-3 md:static md:flex md:w-fit md:flex-row md:gap-5 md:bg-transparent md:p-0 md:shadow-none"
@@ -40,9 +39,9 @@ function SectionsLinks({
       }}
       variants={menuVariants}
     >
-      {["ABOUT", "PROJECTS", "CONTACT"].map((link, index) => (
+      {sections.map((section, index) => (
         <motion.li
-          key={link}
+          key={section}
           custom={index}
           variants={linkVariants}
           initial="hidden"
@@ -51,10 +50,10 @@ function SectionsLinks({
           onClick={closeMenu}
         >
           <a
-            href={`#${link.toLowerCase()}`}
+            href={`#${section.toLowerCase()}`}
             className="relative transition-all duration-200 before:absolute before:top-full before:h-[2px] before:w-full before:scale-x-0 before:rounded before:bg-gradient-to-r before:from-[#fd47b4] before:to-[#3bb5e6] before:transition-all before:duration-200 hover:text-slate-100 hover:before:scale-x-100"
           >
-            {link}
+            {section}
           </a>
         </motion.li>
       ))}

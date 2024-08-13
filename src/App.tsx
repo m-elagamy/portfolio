@@ -1,14 +1,18 @@
-import Header from "./components/Header/Header";
-import Hero from "./components/HeroSection/HeroSection";
-import About from "./components/About";
+import Header from "./components/sections/Header/Header";
+import Hero from "./components/sections/Hero/HeroSection";
+import About from "./components/sections/About";
+import Skills from "./components/sections/Skills";
+import Projects from "./components/sections/Projects";
 
 const App = () => {
   return (
     <>
       <Header />
-      <main>
+      <main className="space-y-16">
         <Hero />
         <About />
+        <Skills />
+        <Projects />
       </main>
     </>
   );
