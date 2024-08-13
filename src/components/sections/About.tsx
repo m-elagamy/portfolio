@@ -6,7 +6,9 @@ const About = () => {
     <AnimatedSection sectionId="about">
       <h2 className="mx-auto mb-10 flex w-fit flex-col-reverse bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-3xl font-bold tracking-widest text-transparent lg:text-5xl">
         ABOUT ME
-        <small className="text-base font-medium text-[#727272]">AGAMY</small>
+        <small className="text-base font-medium text-[#727272] lg:text-lg">
+          AGAMY
+        </small>
       </h2>
       <figure>
         <motion.img
@@ -18,10 +20,10 @@ const About = () => {
           loading="lazy"
           width={640}
           height={640}
-          className="mx-auto mb-5 size-72 rounded-full border-2 border-slate-300 p-1 shadow-2xl lg:size-96"
+          className="mx-auto mb-5 size-80 rounded-full border-2 bg-gradient-to-r from-slate-400 to-slate-500 p-1 shadow-2xl lg:size-96"
         />
       </figure>
-      <div className="mx-auto max-w-2xl space-y-4 text-lg">
+      <div className="mx-auto max-w-2xl space-y-4 lg:text-lg">
         <p>
           Hello! I'm Mahmoud Elagamy, a front end developer with a strong
           passion for creating engaging and user-friendly web applications.
