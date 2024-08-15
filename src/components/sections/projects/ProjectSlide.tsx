@@ -13,7 +13,7 @@ type ProjectSlideProps = {
 
 const ProjectSlide = ({ project }: ProjectSlideProps) => {
   return (
-    <section className="flex min-h-[655px] flex-wrap items-center gap-10 rounded-lg bg-neutral-900 p-4 shadow-lg md:min-h-[330px] md:flex-nowrap md:gap-20">
+    <section className="flex min-h-[625px] cursor-grab flex-wrap items-center gap-10 rounded-lg bg-neutral-900 p-4 shadow-lg md:min-h-[425px] md:flex-nowrap md:gap-20">
       <h2 className="sr-only">Project</h2>
       <figure className="max-w-lg">
         <img
@@ -25,9 +25,13 @@ const ProjectSlide = ({ project }: ProjectSlideProps) => {
           className="w-full transform rounded-lg object-cover shadow-md"
         />
       </figure>
-      <div className="flex flex-col gap-4 text-start">
-        <h3 className="text-3xl font-bold text-slate-300">{project.title}</h3>
-        <p className="text-gray-400">{project.description}</p>
+      <div className="flex flex-col gap-8 text-start">
+        <div>
+          <h3 className="mb-2 text-3xl font-bold text-slate-300">
+            {project.title}
+          </h3>
+          <p className="text-gray-400">{project.description}</p>
+        </div>
 
         <ul className="flex flex-wrap items-center gap-2">
           {project.techs.map((tech) => (
@@ -44,7 +48,7 @@ const ProjectSlide = ({ project }: ProjectSlideProps) => {
             </li>
           ))}
         </ul>
-        <div className="mb-12 flex items-center gap-4">
+        <div className="flex items-center gap-4">
           <a
             href={project.previewLink}
             className="flex items-center justify-center gap-1 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"

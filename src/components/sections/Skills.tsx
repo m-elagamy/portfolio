@@ -82,7 +82,6 @@ const Skills = () => {
                 initial="hidden"
                 animate="visible"
                 className="size-24 lg:size-32"
-                whileHover={{ scale: 1.1 }}
                 src={tech.image}
                 alt={tech.name}
                 title={tech.name}

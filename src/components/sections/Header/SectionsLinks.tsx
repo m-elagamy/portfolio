@@ -51,7 +51,7 @@ function SectionsLinks({ linkVariants, closeMenu }: SectionsLinksProps) {
         >
           <a
             href={`#${section.toLowerCase()}`}
-            className="relative inline-block w-full py-3 transition-all duration-200 before:absolute before:left-0 before:top-3/4 before:h-[2px] before:w-full before:scale-x-0 before:rounded before:bg-gradient-to-r before:from-[#fd47b4] before:to-[#3bb5e6] before:transition-all before:duration-200 hover:text-slate-100 hover:before:scale-x-100"
+            className="relative inline-block w-full py-3 transition-all duration-200 before:left-0 before:top-3/4 before:h-[2px] before:w-full before:origin-left before:scale-x-0 before:rounded before:bg-gradient-to-r before:from-[#fd47b4] before:to-[#3bb5e6] before:transition-all before:duration-200 hover:text-slate-100 hover:before:scale-x-75 md:before:absolute"
           >
             {section}
           </a>

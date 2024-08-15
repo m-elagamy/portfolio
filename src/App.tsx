@@ -3,6 +3,8 @@ import Hero from "./components/sections/Hero/HeroSection";
 import About from "./components/sections/About";
 import Skills from "./components/sections/Skills";
 import Projects from "./components/sections/projects/ProjectsSwiper";
+import Contact from "./components/sections/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
@@ -14,6 +16,10 @@ const App = () => {
         <Skills />
         <Projects />
       </main>
+      <footer className="pb-8">
+        <Contact />
+      </footer>
+      <ScrollToTop />
     </>
   );
 };

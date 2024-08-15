@@ -30,13 +30,14 @@ const Projects = () => {
           clickable: true,
           el: ".custom-swiper-pagination",
           renderBullet: (index, className) => {
-            return `<div class=${className}>
-            <span class="number">${index + 1}</span>
-            <span class="line"></span>
-            </div>`;
+            return `
+              <div class="${className}" aria-label="Slide ${index + 1}" data-title="${projects[index].title}">
+                <span class="number">${index + 1}</span>
+                <span class="line"></span>
+              </div>`;
           },
         }}
-        speed={1000}
+        speed={700}
         keyboard
       >
         {projects.map((project) => (

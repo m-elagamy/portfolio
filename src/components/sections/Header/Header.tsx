@@ -76,7 +76,7 @@ const Header = () => {
                 />
                 <SocialLink
                   link={"#"}
-                  title={"Linked In"}
+                  title="Linked In"
                   icon={
                     <svg
                       className="transition group-hover/item:fill-slate-100"

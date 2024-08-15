@@ -2,16 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* General Styles */
 @layer {
   html {
     @apply scroll-smooth;
   }
 }
 
+html {
+  scrollbar-color: #3bb5e6 transparent !important;
+}
+
 body {
   font-display: swap;
 }
 
+/* Hero Section */
 .hero {
   min-height: calc(100vh - 65px);
 }
@@ -22,8 +28,9 @@ body {
   }
 }
 
-button:disabled svg path {
-  opacity: 0.4;
+/* Projects Section */
+.btn:disabled {
+  background-color: #0000002c;
 }
 
 .custom-swiper-pagination .swiper-pagination-bullet {
@@ -34,25 +41,65 @@ button:disabled svg path {
 }
 
 .custom-swiper-pagination .number {
-  opacity: 0;
-  transition: 0.3s;
+  opacity: 0.3;
+  transition: 0.3s ease;
+  color: dimgrey;
 }
 
 .custom-swiper-pagination .line {
   opacity: 0.3;
   height: 0.25rem;
   width: 0.75rem;
-  background-color: #111;
-  transition: 0.3s;
+  background-color: #9ca3af;
+  transition: 0.3s ease;
   display: block;
   border-radius: 4px;
 }
 
 .custom-swiper-pagination .swiper-pagination-bullet-active .number {
   opacity: 1;
+  font-weight: bold;
+  color: #3b82f6;
 }
 
 .custom-swiper-pagination .swiper-pagination-bullet-active .line {
   width: 2rem;
   opacity: 1;
+  background-color: #3b82f6;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet:hover .number {
+  opacity: 1;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet:hover .line {
+  opacity: 1;
+  background-color: #3b82f6;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet {
+  position: relative;
+}
+
+.custom-swiper-pagination .swiper-pagination-bullet:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* Footer */
+footer section {
+  @apply mt-20 min-h-[50vh] lg:mt-52 !important;
 }
