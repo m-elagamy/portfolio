@@ -36,7 +36,7 @@ const Projects = () => {
             </div>`;
           },
         }}
-        speed={1200}
+        speed={1000}
         keyboard
       >
         {projects.map((project) => (
