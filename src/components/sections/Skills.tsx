@@ -42,7 +42,7 @@ const technologyArray = [
   {
     name: "Framer Motion",
     image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg", // Replace with the actual Framer Motion logo URL
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
     link: "https://www.framer.com/motion/",
   },
   {
@@ -60,13 +60,13 @@ const Skills = () => {
       y: 0,
       scale: 1,
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut", delay: i * 0.2 },
+      transition: { duration: 0.6, ease: "easeOut", delay: i * 0.3 },
     }),
   };
 
   return (
     <AnimatedSection sectionId="skills">
-      <h2 className="mx-auto mb-10 flex w-fit flex-col-reverse bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-3xl font-bold tracking-widest text-transparent lg:text-5xl">
+      <h2 className="mx-auto mb-16 flex w-fit flex-col-reverse bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-3xl font-bold tracking-widest text-transparent lg:text-5xl">
         MY TECH STACK
         <small className="text-base font-medium text-[#727272] lg:text-lg">
           TECHNOLOGIES & TOOLS I'VE BEEN WORKING WITH

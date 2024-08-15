@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "framer-motion": "^11.3.24",
+    "lucide-react": "^0.427.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "swiper": "^11.1.9",
     "tsparticles": "^3.5.0"
   },
   "devDependencies": {

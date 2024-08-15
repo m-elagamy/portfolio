@@ -15,7 +15,7 @@ const AnimatedSection = ({ children, sectionId }: AnimatedSectionProps) => {
     <section
       ref={sectionRef}
       id={sectionId}
-      className="grid min-h-[60vh] scroll-mt-6 place-items-center text-center text-[#676767] lg:min-h-[80vh]"
+      className="flex min-h-[60vh] scroll-mt-6 place-items-center text-center text-[#676767] md:grid lg:min-h-[80vh]"
     >
       <AnimatePresence>
         {isVisible && (

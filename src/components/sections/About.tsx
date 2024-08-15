@@ -4,7 +4,7 @@ import AnimatedSection from "../AnimatedSection";
 const About = () => {
   return (
     <AnimatedSection sectionId="about">
-      <h2 className="mx-auto mb-10 flex w-fit flex-col-reverse bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-3xl font-bold tracking-widest text-transparent lg:text-5xl">
+      <h2 className="mx-auto mb-16 flex w-fit flex-col-reverse bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-3xl font-bold tracking-widest text-transparent lg:text-5xl">
         ABOUT ME
         <small className="text-base font-medium text-[#727272] lg:text-lg">
           AGAMY

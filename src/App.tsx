@@ -2,7 +2,7 @@ import Header from "./components/sections/Header/Header";
 import Hero from "./components/sections/Hero/HeroSection";
 import About from "./components/sections/About";
 import Skills from "./components/sections/Skills";
-import Projects from "./components/sections/Projects";
+import Projects from "./components/sections/projects/ProjectsSwiper";
 
 const App = () => {
   return (

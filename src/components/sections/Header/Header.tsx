@@ -20,7 +20,7 @@ const Header = () => {
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut", delay: i * 0.2 },
+      transition: { duration: 0.6, ease: "easeOut", delay: i * 0.3 },
     }),
   };
 
@@ -54,7 +54,7 @@ const Header = () => {
               variants={linkVariants}
               initial="hidden"
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
               className="flex items-center gap-4"
             >
               <div>
