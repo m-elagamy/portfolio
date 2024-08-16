@@ -3,6 +3,7 @@ import restCountriesApiImage from "../../../assets/images/Rest-Countries-API-lig
 import todoImage from "../../../assets/images/To-Do.png";
 import ageCalcAge from "../../../assets/images/Age-Calculator.png";
 import weatherApp from "../../../assets/images/weather-app.png";
+import quizAppImage from "../../../assets/images/Quiz.png";
 import reactImage from "../../../assets/images/React.png";
 import tailwindImage from "../../../assets/images/Tailwind CSS.png";
 import typScriptImage from "../../../assets/images/TypeScript.png";
@@ -145,5 +146,29 @@ export const projects = [
 
     previewLink: "https://mahmoud-elagamy.github.io/Weather-App/",
     codeLink: "https://github.com/Mahmoud-ElAgamy/Weather-App",
+  },
+  {
+    id: 6,
+    image: quizAppImage,
+    title: "Quiz App",
+    description:
+      "This HTML, CSS, and JavaScript quiz app tests users' knowledge about the life of Prophet Muhammad (peace be upon him). It features multiple-choice questions, instant feedback, and aims to be an engaging learning tool.",
+    techs: [
+      {
+        techName: "HTML",
+        techImage: htmlImage,
+      },
+      {
+        techName: "CSS",
+        techImage: cssImage,
+      },
+      {
+        techName: "JavaScript",
+        techImage: jsImage,
+      },
+    ],
+
+    previewLink: "https://mahmoud-elagamy.github.io/Quiz-App/",
+    codeLink: "https://github.com/Mahmoud-ElAgamy/Quiz-App",
   },
 ];
