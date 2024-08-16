@@ -1,3 +1,5 @@
+import { SetStateAction, useState } from "react";
+
 // Swiper Library
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Navigation, Pagination } from "swiper/modules";
@@ -15,6 +17,13 @@ import SwiperPagination from "./SwiperPagination";
 import { projects } from "./projectsData";
 
 const Projects = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleSlideChange = (swiper: {
+    activeIndex: SetStateAction<number>;
+  }) => {
+    setActiveIndex(swiper.activeIndex);
+  };
   return (
     <AnimatedSection sectionId="projects">
       <h2 className="mx-auto mb-16 flex w-fit flex-col-reverse bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-3xl font-bold tracking-widest text-transparent lg:text-5xl">
@@ -24,6 +33,7 @@ const Projects = () => {
         </small>
       </h2>
       <Swiper
+        className="rounded-lg bg-[#232c3c]"
         modules={[Navigation, Pagination, Keyboard]}
         navigation={{ nextEl: "#nav-right", prevEl: "#nav-left" }}
         pagination={{
@@ -39,10 +49,15 @@ const Projects = () => {
         }}
         speed={innerWidth > 768 ? 1200 : 600}
         keyboard
+        onSlideChange={handleSlideChange}
       >
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <SwiperSlide key={project.id}>
-            <ProjectSlide project={project} />
+            <ProjectSlide
+              project={project}
+              activeIndex={activeIndex}
+              index={index}
+            />
           </SwiperSlide>
         ))}
         <SwiperNavigationControls />

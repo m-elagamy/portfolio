@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const SwiperNavigationControls = () => {
   return (
-    <div className="absolute left-0 top-1/2 z-[1] hidden w-full -translate-y-1/2 items-center justify-between px-4 *:bg-black/50 *:shadow-md md:flex">
+    <div className="absolute left-0 top-1/2 z-[1] hidden w-full -translate-y-1/2 items-center justify-between px-2 *:bg-black/50 *:shadow-md md:flex">
       <button
         id="nav-left"
         className="btn btn-sm border-none hover:scale-105 hover:bg-black/70"
