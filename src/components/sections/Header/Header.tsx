@@ -5,15 +5,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import SocialLink from "./SocialLink";
 import Logo from "./Logo";
 import SectionsLinks from "./SectionsLinks";
+import ScrollIndicator from "./ScrollIndicator";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-
   const [isLargeScreen, setIsLargeScreen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen((prevState) => !prevState);
-  };
+  const [isScrolled, setScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const linkVariants = {
     hidden: { opacity: 0, y: -20 },
@@ -22,6 +20,10 @@ const Header = () => {
       y: 0,
       transition: { duration: 0.6, ease: "easeOut", delay: i * 0.3 },
     }),
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen((prevState) => !prevState);
   };
 
   useEffect(() => {
@@ -36,10 +38,38 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    let animationFrameId: number;
+
+    const handleScroll = () => {
+      animationFrameId = requestAnimationFrame(() => {
+        const position = window.scrollY;
+        if (position > 50) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+
+        const totalHeight = document.body.scrollHeight - window.innerHeight;
+        const progress = totalHeight ? (position / totalHeight) * 100 : 0;
+        setScrollProgress(progress);
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
   return (
-    <header className="bg-[#0F0F0F] pt-8">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-black/50 shadow-xl backdrop-blur-sm" : "bg-[#0F0F0F]"}`}
+    >
+      <ScrollIndicator scrollProgress={scrollProgress} />
       <div className="container">
-        <nav className="flex items-center justify-between text-[#fbfbfc99]">
+        <nav className="flex items-center justify-between py-4 text-[#fbfbfc99]">
           <Logo />
           <div className="links-menu flex items-center gap-7">
             <AnimatePresence>
@@ -54,7 +84,11 @@ const Header = () => {
               variants={linkVariants}
               initial="hidden"
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.2, ease: "easeOut" }}
+              transition={{
+                duration: 0.6,
+                delay: innerWidth > 767 ? 1.2 : 0.3,
+                ease: "easeOut",
+              }}
               className="flex items-center gap-4"
             >
               <div>

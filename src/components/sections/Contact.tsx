@@ -22,7 +22,7 @@ const Contact = () => {
             </p>
           </div>
           <ul className="w-fit text-left">
-            <li className="text-[#3bb5e6] hover:text-[#fd47b4]">
+            <li className="w-fit text-[#3bb5e6] hover:text-[#fd47b4]">
               <a
                 href="mailto:mahmoudelagamy474@gmail.com"
                 className="btn border-none pl-0 hover:scale-105"
@@ -30,7 +30,7 @@ const Contact = () => {
                 <Mail /> MAIL ME
               </a>
             </li>
-            <li className="text-[#3bb5e6] hover:text-[#fd47b4]">
+            <li className="w-fit text-[#3bb5e6] hover:text-[#fd47b4]">
               <a
                 href="tel:+201277911846"
                 className="btn border-none pl-0 hover:scale-105"
