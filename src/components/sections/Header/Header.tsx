@@ -47,7 +47,7 @@ const Header = () => {
     const handleScroll = () => {
       animationFrameId = requestAnimationFrame(() => {
         const position = window.scrollY;
-        if (position > 50) {
+        if (position > (innerWidth > 1440 ? 900 : 500)) {
           setScrolled(true);
         } else {
           setScrolled(false);
