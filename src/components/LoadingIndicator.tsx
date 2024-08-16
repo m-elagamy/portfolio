@@ -14,7 +14,7 @@ const LoadingIndicator = () => {
       }}
     >
       <motion.div
-        className="loading loading-ball size-28 bg-gradient-to-tr from-[#3bb5e6] to-[#fd47b4]"
+        className="loading loading-ball size-20 bg-gradient-to-tr from-[#3bb5e6] to-[#fd47b4] md:size-28"
         initial={{ scale: 0.8, rotate: 0 }}
         animate={{ scale: 1, rotate: 360 }} // Smooth rotation effect
         exit={{ scale: 0.8, rotate: -360 }} // Reverse rotation on exit
