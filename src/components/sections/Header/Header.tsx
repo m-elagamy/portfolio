@@ -68,7 +68,7 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-black/50 shadow-xl backdrop-blur-sm" : "bg-[#0F0F0F]"}`}
+      className={`sticky top-0 z-50 transition-all duration-300 md:h-[80px] ${isScrolled ? "bg-black/50 shadow-xl backdrop-blur-sm" : "bg-[#0F0F0F]"}`}
     >
       <ScrollIndicator scrollProgress={scrollProgress} />
       <div className="container">
