@@ -26,8 +26,8 @@ const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth >= 1024);
-      if (window.innerWidth >= 1024) setMenuOpen(false);
+      setIsLargeScreen(window.innerWidth >= 768);
+      if (window.innerWidth >= 768) setMenuOpen(false);
     };
 
     handleResize();
@@ -93,7 +93,7 @@ const Header = () => {
                   }
                 />
               </div>
-              <label className="btn btn-circle swap swap-rotate btn-sm bg-transparent lg:hidden">
+              <label className="btn btn-circle swap swap-rotate btn-sm bg-transparent md:hidden">
                 {/* this hidden checkbox controls the state */}
                 <input
                   type="checkbox"
