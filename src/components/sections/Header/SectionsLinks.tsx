@@ -8,7 +8,7 @@ type SectionsLinksProps = {
     visible: (i: number) => {
       opacity: number;
       y: number;
-      transition: { duration: number; ease: string; delay: number };
+      transition: { duration: number; ease: string };
     };
   };
   closeMenu: () => void;
@@ -22,7 +22,7 @@ function SectionsLinks({ linkVariants, closeMenu }: SectionsLinksProps) {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: "easeOut", delay: 0.4 },
     },
   };
 

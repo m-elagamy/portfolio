@@ -20,7 +20,7 @@ const HeroText = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.3,
-        delayChildren: 0.5,
+        delayChildren: 0.4,
       },
     },
     exit: { opacity: 0, transition: { duration: 1 } },
