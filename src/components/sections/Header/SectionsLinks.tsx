@@ -22,7 +22,11 @@ function SectionsLinks({ linkVariants, closeMenu }: SectionsLinksProps) {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut", delay: 0.4 },
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        delay: innerWidth > 767 ? 0.4 : 0,
+      },
     },
   };
 
