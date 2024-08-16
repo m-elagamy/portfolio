@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 
 // Custom Components
 import SocialLink from "./SocialLink";
 import Logo from "./Logo";
 import SectionsLinks from "./SectionsLinks";
 import ScrollIndicator from "./ScrollIndicator";
+
+// Utils
+import framerMotionComponents from "../../../utils/framerMotionComponents";
+const { motion, AnimatePresence } = framerMotionComponents;
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);

@@ -1,4 +1,6 @@
-import { motion } from "framer-motion";
+// Utils
+import framerMotionComponents from "../../../utils/framerMotionComponents";
+const { motion } = framerMotionComponents;
 
 function Logo() {
   const logoVariants = {

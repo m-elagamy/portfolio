@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
+// Utils
+import framerMotionComponents from "../../../utils/framerMotionComponents";
+const { motion, AnimatePresence } = framerMotionComponents;
 const HeroText = () => {
   const [stage, setStage] = useState(0);
 

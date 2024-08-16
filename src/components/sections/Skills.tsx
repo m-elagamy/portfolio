@@ -1,5 +1,8 @@
 import AnimatedSection from "../AnimatedSection";
-import { motion } from "framer-motion";
+
+// Utils
+import framerMotionComponents from "../../utils/framerMotionComponents";
+const { motion } = framerMotionComponents;
 
 const technologyArray = [
   {

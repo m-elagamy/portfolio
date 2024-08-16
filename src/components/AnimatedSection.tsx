@@ -1,7 +1,11 @@
-import { motion, AnimatePresence } from "framer-motion";
 import { useRef, ReactNode } from "react";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
+// Utils
+import framerMotionComponents from "../utils/framerMotionComponents";
+const { motion, AnimatePresence } = framerMotionComponents;
+
+// Types
 type AnimatedSectionProps = {
   children: ReactNode;
   sectionId: string;

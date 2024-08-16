@@ -1,6 +1,10 @@
 import profilePicture from "./../../assets/images/profile-pic.jpg";
-import { motion } from "framer-motion";
 import AnimatedSection from "../AnimatedSection";
+
+// Utils
+import framerMotionComponents from "../../utils/framerMotionComponents";
+const { motion } = framerMotionComponents;
+
 const About = () => {
   return (
     <AnimatedSection sectionId="about">

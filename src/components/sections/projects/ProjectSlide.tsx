@@ -1,3 +1,7 @@
+// Utils
+import framerMotionComponents from "../../../utils/framerMotionComponents";
+const { motion, AnimatePresence } = framerMotionComponents;
+
 // Types
 type ProjectSlideProps = {
   project: {
@@ -12,8 +16,6 @@ type ProjectSlideProps = {
   activeIndex: number;
   index: number;
 };
-
-import { AnimatePresence, motion } from "framer-motion";
 
 const ProjectSlide = ({ project, activeIndex, index }: ProjectSlideProps) => {
   const swiperVariants = {
