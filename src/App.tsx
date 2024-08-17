@@ -23,10 +23,10 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const minimumDelay = 400; // The minimum delay ensures that the loading indicator is shown for at least 400ms.
+    const minimumDelay = 500; // The minimum delay ensures that the loading indicator is shown for at least 400ms.
 
     const contentLoadPromise = new Promise((resolve) => {
-      setTimeout(resolve, 300); // The minimum delay works in conjunction with the actual content loading time. If the content takes longer to load than the minimum delay, the indicator will be shown until the content is ready.
+      setTimeout(resolve, 400); // The minimum delay works in conjunction with the actual content loading time. If the content takes longer to load than the minimum delay, the indicator will be shown until the content is ready.
     }); // If the content loads faster than the minimum delay, the loading indicator will still be displayed for the full duration of the minimum delay.
 
     const timer = setTimeout(() => {
