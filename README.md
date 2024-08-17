@@ -1,50 +1,33 @@
-# React + TypeScript + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio website! This is a single-page application built using React, TypeScript, Tailwind CSS, and other modern web development technologies. The portfolio is designed to showcase my projects, skills, and experience in a visually appealing and user-friendly manner.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Demo](#demo)
+- [Features](#features)
+- [Technologies & Tools Used](#technologies-used)
 
-## Expanding the ESLint configuration
+## Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Check out the live demo of the portfolio at [agamy.netlify.app](https://agamy.netlify.app/).
 
-- Configure the top-level `parserOptions` property like this:
+## Features:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Responsive Design**: Fully responsive layout that works on all devices.
+- **Single-Page Application**: Seamless navigation between sections with smooth scrolling.
+- **Lazy Loading**: Improved performance with lazy loading of sections using React's `Suspense`.
+- **Custom Swiper**: Interactive project swiper with customized navigation and pagination.
+- **Framer Motion Animations**: Enhanced user experience with animations for slide transitions and loading indicators.
+- **Glassmorphism**: Modern glass morphism effect applied to project slides and the header.
+- **SEO Optimized**: Optimized for search engines with metadata and responsive design.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Technologies & Tools Used:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **[React](https://reactjs.org/)**: JavaScript library for building user interfaces.
+- **[TypeScript](https://www.typescriptlang.org/)**: Typed superset of JavaScript that enhances code quality.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework for styling.
+- **[Framer Motion](https://www.framer.com/motion/)**: Animation library for React.
+- **[Swiper](https://swiperjs.com/)**: Modern touch slider for showing projects.
+- **[DaisyUI](https://daisyui.com/)**: Tailwind CSS components for faster development.
+- **[Netlify](https://www.netlify.com/)**: Hosting platform for the live demo.
