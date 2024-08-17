@@ -11,7 +11,6 @@ import "swiper/css/pagination";
 import ProjectSlide from "./ProjectSlide";
 import AnimatedSection from "../../AnimatedSection";
 import SwiperNavigationControls from "./SwiperNavigationControls";
-import SwiperPagination from "./SwiperPagination";
 
 // Data
 import { projects } from "./projectsData";
@@ -39,7 +38,6 @@ const Projects = () => {
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {
-            // Access the slide's data-title attribute
             const slides = document.querySelectorAll(".swiper-slide");
             const title = slides[index]?.getAttribute("data-title") || "";
             return `<span class="${className}" data-tooltip="${title}"></span>`;
@@ -60,7 +58,6 @@ const Projects = () => {
           </SwiperSlide>
         ))}
         <SwiperNavigationControls />
-        <SwiperPagination />
       </Swiper>
     </AnimatedSection>
   );
