@@ -33,7 +33,7 @@ const Projects = () => {
         </small>
       </h2>
       <Swiper
-        className="rounded-lg bg-[#232c3c]"
+        className="rounded-lg"
         modules={[Navigation, Pagination, Keyboard]}
         navigation={{ nextEl: "#nav-right", prevEl: "#nav-left" }}
         pagination={{

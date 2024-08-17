@@ -31,8 +31,10 @@ body {
 }
 
 /* Projects Section */
-.btn:disabled {
-  background-color: #0000002c;
+.swiper {
+  background-image: url(/src/assets/images/project-bg.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .custom-swiper-pagination .swiper-pagination-bullet {
@@ -43,13 +45,13 @@ body {
 }
 
 .custom-swiper-pagination .number {
-  opacity: 0.3;
+  opacity: 0.5;
   transition: 0.3s ease;
-  color: dimgrey;
+  color: rgb(126, 126, 126);
 }
 
 .custom-swiper-pagination .line {
-  opacity: 0.3;
+  opacity: 0.5;
   height: 0.25rem;
   width: 0.75rem;
   background-color: #9ca3af;
@@ -99,6 +101,10 @@ body {
   white-space: nowrap;
   opacity: 0.7;
   z-index: 1;
+}
+
+.btn:disabled {
+  background-color: #0000002c;
 }
 
 /* Footer */

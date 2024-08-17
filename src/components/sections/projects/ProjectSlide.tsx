@@ -27,7 +27,7 @@ const ProjectSlide = ({ project, activeIndex, index }: ProjectSlideProps) => {
     <AnimatePresence>
       {activeIndex === index && (
         <motion.section
-          className="flex min-h-[656px] cursor-grab flex-wrap items-center rounded-lg bg-gray-800 p-4 shadow-lg md:min-h-[425px] md:flex-nowrap md:gap-20"
+          className="slide flex min-h-[656px] cursor-grab flex-wrap items-center rounded-lg bg-black/5 p-4 backdrop-blur-[2px] md:min-h-[425px] md:flex-nowrap md:gap-20"
           layout
           initial="initial"
           animate={activeIndex === index ? "animate" : "initial"}
@@ -50,13 +50,13 @@ const ProjectSlide = ({ project, activeIndex, index }: ProjectSlideProps) => {
               <h3 className="mb-2 text-3xl font-bold text-white">
                 {project.title}
               </h3>
-              <p className="text-gray-400">{project.description}</p>
+              <p className="text-gray-300">{project.description}</p>
             </div>
 
             <ul className="flex flex-wrap items-center gap-2">
               {project.techs.map((tech) => (
                 <li
-                  className="flex items-center gap-1 rounded-lg bg-gray-700 p-2 text-sm text-gray-200"
+                  className="flex items-center gap-1 rounded-lg bg-gray-700/50 p-2 text-sm text-gray-200"
                   key={tech.techName}
                 >
                   <img
