@@ -31,84 +31,58 @@ body {
 }
 
 /* Projects Section */
+.swiper-slide {
+  will-change: transform, opacity;
+}
+
 .swiper {
   background-image: url(/src/assets/images/project-bg.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.custom-swiper-pagination .swiper-pagination-bullet {
-  background-color: transparent;
+/* Pagination Styles */
+.swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #00000079;
   opacity: 1;
-  width: auto;
-  height: auto;
-}
-
-.custom-swiper-pagination .number {
-  opacity: 0.5;
-  transition: 0.3s ease;
-  color: rgb(126, 126, 126);
-}
-
-.custom-swiper-pagination .line {
-  opacity: 0.5;
-  height: 0.25rem;
-  width: 0.75rem;
-  background-color: #9ca3af;
-  transition: 0.3s ease;
-  display: block;
-  border-radius: 4px;
-}
-
-.custom-swiper-pagination .swiper-pagination-bullet-active .number {
-  opacity: 1;
-  font-weight: bold;
-  color: #3bb5e6;
-}
-
-.custom-swiper-pagination .swiper-pagination-bullet-active .line {
-  width: 2rem;
-  opacity: 1;
-  background-color: #3bb5e6;
-}
-
-.custom-swiper-pagination .swiper-pagination-bullet:hover .number {
-  opacity: 1;
-  font-weight: bold;
-  color: #3bb5e6;
-}
-
-.custom-swiper-pagination .swiper-pagination-bullet:hover .line {
-  opacity: 1;
-  background-color: #3bb5e6;
-}
-
-.custom-swiper-pagination .swiper-pagination-bullet {
+  border-radius: 50%;
+  margin-inline: 6px !important;
+  transition: 0.4s ease-in-out;
   position: relative;
 }
 
-.custom-swiper-pagination .swiper-pagination-bullet:hover::after {
-  content: attr(data-title);
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #3bb5e6;
+  transform: scale(1.2);
+}
+
+/* Tooltip Styles */
+.swiper-pagination-bullet::after {
+  content: attr(data-tooltip);
   position: absolute;
-  top: -40px;
+  top: -40px; /* Adjust if necessary */
   left: 50%;
   transform: translateX(-50%);
-  padding: 5px 10px;
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
+  padding: 6px;
   border-radius: 5px;
   font-size: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
   white-space: nowrap;
-  opacity: 0.7;
-  z-index: 1;
+  transition: 0.4s 0.1s ease-in-out;
 }
 
+.swiper-pagination-bullet:hover::after {
+  opacity: 1;
+}
+
+/* Navigation button */
 .btn:disabled {
   background-color: #0000002c;
-}
-
-.swiper-slide {
-  will-change: transform, opacity;
 }
 
 /* Footer */

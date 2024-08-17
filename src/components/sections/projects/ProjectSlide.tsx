@@ -27,7 +27,7 @@ const ProjectSlide = ({ project, activeIndex, index }: ProjectSlideProps) => {
     <AnimatePresence>
       {activeIndex === index && (
         <motion.section
-          className="slide flex min-h-[656px] cursor-grab flex-wrap items-center rounded-lg bg-black/5 p-4 backdrop-blur-[2px] md:min-h-[425px] md:flex-nowrap md:gap-20"
+          className="flex min-h-[656px] cursor-grab flex-wrap items-center rounded-lg bg-black/5 p-4 backdrop-blur-[2px] md:min-h-[425px] md:flex-nowrap md:gap-20"
           layout
           initial="initial"
           animate={activeIndex === index ? "animate" : "initial"}

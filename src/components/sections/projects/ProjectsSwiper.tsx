@@ -38,13 +38,11 @@ const Projects = () => {
         navigation={{ nextEl: "#nav-right", prevEl: "#nav-left" }}
         pagination={{
           clickable: true,
-          el: ".custom-swiper-pagination",
-          renderBullet: (index, className) => {
-            return `
-              <div class="${className}" aria-label="Slide ${index + 1}" data-title="${projects[index].title}">
-                <span class="number">${index + 1}</span>
-                <span class="line"></span>
-              </div>`;
+          renderBullet: function (index, className) {
+            // Access the slide's data-title attribute
+            const slides = document.querySelectorAll(".swiper-slide");
+            const title = slides[index]?.getAttribute("data-title") || "";
+            return `<span class="${className}" data-tooltip="${title}"></span>`;
           },
         }}
         speed={innerWidth > 768 ? 1200 : 600}
@@ -53,7 +51,7 @@ const Projects = () => {
         lazyPreloadPrevNext={2}
       >
         {projects.map((project, index) => (
-          <SwiperSlide key={project.id}>
+          <SwiperSlide key={project.id} data-title={project.title}>
             <ProjectSlide
               project={project}
               activeIndex={activeIndex}
