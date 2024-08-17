@@ -50,6 +50,7 @@ const Projects = () => {
         speed={innerWidth > 768 ? 1200 : 600}
         keyboard
         onSlideChange={handleSlideChange}
+        lazyPreloadPrevNext={2}
       >
         {projects.map((project, index) => (
           <SwiperSlide key={project.id}>
