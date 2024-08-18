@@ -19,8 +19,6 @@ Check out the live demo of the portfolio at [agamy.netlify.app](https://agamy.ne
 - **Lazy Loading**: Improved performance with lazy loading of sections using React's `Suspense`.
 - **Custom Swiper**: Interactive project swiper with customized navigation and pagination.
 - **Framer Motion Animations**: Enhanced user experience with animations for slide transitions and loading indicators.
-- **Glassmorphism**: Modern glass morphism effect applied to project slides and the header.
-- **SEO Optimized**: Optimized for search engines with metadata and responsive design.
 
 ## Technologies & Tools Used:
 
@@ -30,4 +28,3 @@ Check out the live demo of the portfolio at [agamy.netlify.app](https://agamy.ne
 - **[Framer Motion](https://www.framer.com/motion/)**: Animation library for React.
 - **[Swiper](https://swiperjs.com/)**: Modern touch slider for showing projects.
 - **[DaisyUI](https://daisyui.com/)**: Tailwind CSS components for faster development.
-- **[Netlify](https://www.netlify.com/)**: Hosting platform for the live demo.
