@@ -13,7 +13,7 @@ import LoadingIndicator from "./components/LoadingIndicator";
 
 // Lazy Loaded Components
 const About = lazy(() => import("./components/sections/About"));
-const Skills = lazy(() => import("./components/sections/Skills"));
+const Skills = lazy(() => import("./components/sections/Skills/Skills"));
 const Projects = lazy(
   () => import("./components/sections/projects/ProjectsSwiper"),
 );
