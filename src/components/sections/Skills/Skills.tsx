@@ -24,25 +24,33 @@ const Skills = () => {
           TECHNOLOGIES & TOOLS I'VE BEEN WORKING WITH
         </small>
       </h2>
-      <ul className="flex flex-wrap items-center justify-center gap-6">
+      <ul className="flex flex-wrap items-center justify-center gap-10">
         {technologiesArray.map((tech, i) => (
-          <li key={tech.name}>
-            <a href={tech.link} target="_blank" rel="noreferrer">
-              <motion.img
-                custom={i}
-                variants={linkVariants}
-                initial="hidden"
-                animate="visible"
-                className="size-24 lg:size-32"
+          <motion.li
+            key={tech.name}
+            custom={i}
+            variants={linkVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <a
+              href={tech.link}
+              target="_blank"
+              rel="noreferrer"
+              title={tech.name}
+              className="inline-block transition duration-300 ease-in-out hover:scale-105"
+            >
+              <img
+                className="mx-auto mb-2"
                 src={tech.image}
                 alt={tech.name}
-                title={tech.name}
-                width={128}
-                height={128}
+                width={62}
+                height={62}
                 loading="lazy"
               />
+              {tech.name}
             </a>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </AnimatedSection>
