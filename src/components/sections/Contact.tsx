@@ -59,7 +59,7 @@ const Contact = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/mahmoudelagamy/"
                 className="group/item btn btn-ghost btn-sm hover:scale-110 hover:bg-[#a382820a]"
                 target="_blank"
                 title="Linked In"

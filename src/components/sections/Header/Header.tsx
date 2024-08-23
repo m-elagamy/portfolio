@@ -96,8 +96,8 @@ const Header = () => {
             >
               <div>
                 <SocialLink
-                  link={"https://github.com/Mahmoud-ElAgamy"}
-                  title={"Github"}
+                  link="https://github.com/Mahmoud-ElAgamy"
+                  title="Github"
                   icon={
                     <svg
                       className="transition group-hover/item:fill-slate-100"
@@ -112,7 +112,7 @@ const Header = () => {
                   }
                 />
                 <SocialLink
-                  link={"#"}
+                  link="https://www.linkedin.com/in/mahmoudelagamy/"
                   title="Linked In"
                   icon={
                     <svg
