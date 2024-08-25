@@ -24,6 +24,12 @@ export const technologiesArray = [
     link: "https://reactjs.org/",
   },
   {
+    name: "Next.js",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+    link: "https://nextjs.org/",
+  },
+  {
     name: "Tailwind CSS",
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
