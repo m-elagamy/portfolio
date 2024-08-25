@@ -25,7 +25,7 @@ const Contact = () => {
             <li className="w-fit">
               <a
                 href="mailto:mahmoudelagamy474@gmail.com"
-                className="group/item btn border-none pl-0 shadow-none hover:scale-105"
+                className="group/item btn btn-ghost border-none pl-0 shadow-none hover:scale-105"
               >
                 <Mail className="text-[#3bb5e6] transition group-hover/item:text-[#fd47b4]" />
                 MAIL ME
@@ -34,7 +34,7 @@ const Contact = () => {
             <li className="w-fit">
               <a
                 href="tel:+201277911846"
-                className="group/item btn border-none pl-0 shadow-none hover:scale-105"
+                className="group/item btn btn-ghost border-none pl-0 shadow-none hover:scale-105"
               >
                 <Phone className="text-[#3bb5e6] transition group-hover/item:text-[#fd47b4]" />
                 CALL ME
@@ -80,7 +80,7 @@ const Contact = () => {
               <a
                 href="https://www.frontendmentor.io/profile/Mahmoud-ElAgamy"
                 target="_blank"
-                className="group/item btn border-none shadow-none hover:scale-110"
+                className="group/item btn btn-ghost border-none shadow-none hover:scale-110"
                 title="Frontend Mentor"
               >
                 <svg
