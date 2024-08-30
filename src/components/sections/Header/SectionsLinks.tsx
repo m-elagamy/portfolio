@@ -14,22 +14,22 @@ type SectionsLinksProps = {
   closeMenu: () => void;
 };
 
-function SectionsLinks({ linkVariants, closeMenu }: SectionsLinksProps) {
-  const sections = ["ABOUT", "SKILLS", "PROJECTS", "CONTACT"];
+const sections = ["ABOUT", "SKILLS", "PROJECTS", "CONTACT"];
 
-  const menuVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-        delay: innerWidth > 767 ? 0.4 : 0,
-      },
+const menuVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+      delay: innerWidth > 767 ? 0.4 : 0,
     },
-  };
+  },
+};
 
+function SectionsLinks({ linkVariants, closeMenu }: SectionsLinksProps) {
   return (
     <motion.ul
       className="absolute left-0 top-[74px] z-20 w-full flex-col items-center bg-[#121212d8] text-center tracking-[0.3em] shadow-md md:static md:flex md:w-fit md:flex-row md:gap-5 md:bg-transparent md:p-0 md:shadow-none"

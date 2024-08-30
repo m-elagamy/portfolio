@@ -88,8 +88,8 @@ const Header = () => {
               initial="hidden"
               animate={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.6,
-                delay: innerWidth > 767 ? 1.2 : 0.3,
+                duration: 0.8,
+                delay: innerWidth > 767 ? 1.2 : 0.5,
                 ease: "easeOut",
               }}
               className="flex items-center gap-4"

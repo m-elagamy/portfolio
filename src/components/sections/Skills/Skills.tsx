@@ -41,7 +41,7 @@ const Skills = () => {
               className="inline-block transition duration-300 ease-in-out hover:scale-105"
             >
               <img
-                className="mx-auto mb-2"
+                className="mx-auto"
                 src={tech.image}
                 alt={tech.name}
                 width={62}
