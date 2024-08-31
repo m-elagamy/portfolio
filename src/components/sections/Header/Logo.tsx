@@ -18,7 +18,7 @@ function Logo() {
       variants={logoVariants}
       initial="hidden"
       animate="visible"
-      className="ml-3 flex items-center gap-2 font-bold"
+      className="ml-[2px] flex items-center gap-2 font-bold"
     >
       <span className="bg-gradient-to-r from-[#fd47b4] to-[#3bb5e6] bg-clip-text font-mono font-bold text-transparent">
         &lt;/&gt;

@@ -40,7 +40,7 @@ const Header = ({ isScrolled }: { isScrolled: boolean }) => {
 
   return (
     <header
-      className={`fixed left-0 right-0 top-4 z-50 mx-auto max-w-sm rounded-full py-1 shadow drop-shadow backdrop-blur transition-all duration-300 md:max-w-3xl ${isScrolled && "bg-black/50"}`}
+      className={`fixed left-0 right-0 top-4 z-50 mx-auto max-w-sm rounded-full py-1 drop-shadow backdrop-blur transition-all duration-300 md:max-w-3xl ${isScrolled && "bg-black/50 shadow"}`}
     >
       <div className="container">
         <nav className="flex items-center justify-between text-sm text-[#fbfbfc99]">
