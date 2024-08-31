@@ -4,7 +4,7 @@ const { motion } = framerMotionComponents;
 
 function Logo() {
   const logoVariants = {
-    hidden: { opacity: 0, y: -20 },
+    hidden: { opacity: 0, y: -50 },
     visible: {
       opacity: 1,
       y: 0,
@@ -18,7 +18,7 @@ function Logo() {
       variants={logoVariants}
       initial="hidden"
       animate="visible"
-      className="flex items-center gap-2 text-xl font-bold md:text-2xl"
+      className="ml-3 flex items-center gap-2 font-bold"
     >
       <span className="bg-gradient-to-r from-[#fd47b4] to-[#3bb5e6] bg-clip-text font-mono font-bold text-transparent">
         &lt;/&gt;
