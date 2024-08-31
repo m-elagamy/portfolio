@@ -4,26 +4,23 @@ import { useState, useEffect } from "react";
 import SocialLink from "./SocialLink";
 import Logo from "./Logo";
 import SectionsLinks from "./SectionsLinks";
-import ScrollIndicator from "./ScrollIndicator";
 
 // Utils
 import framerMotionComponents from "../../../utils/framerMotionComponents";
 const { motion, AnimatePresence } = framerMotionComponents;
 
-const Header = () => {
+const linkVariants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut", delay: i * 0.3 },
+  }),
+};
+
+const Header = ({ isScrolled }: { isScrolled: boolean }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
-  const [isScrolled, setScrolled] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  const linkVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut", delay: i * 0.3 },
-    }),
-  };
 
   const toggleMenu = () => {
     setMenuOpen((prevState) => !prevState);
@@ -41,44 +38,19 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    let animationFrameId: number;
-
-    const handleScroll = () => {
-      animationFrameId = requestAnimationFrame(() => {
-        const position = window.scrollY;
-        if (position > (innerWidth > 1440 ? 900 : 500)) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
-        }
-
-        const totalHeight = document.body.scrollHeight - window.innerHeight;
-        const progress = totalHeight ? (position / totalHeight) * 100 : 0;
-        setScrollProgress(progress);
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, []);
-
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 md:h-[80px] ${isScrolled ? "bg-black/50 shadow-xl backdrop-blur-sm" : "bg-[#0F0F0F]"}`}
+      className={`fixed left-0 right-0 top-4 z-50 mx-auto max-w-sm rounded-full py-1 shadow drop-shadow backdrop-blur transition-all duration-300 md:max-w-3xl ${isScrolled && "bg-black/50"}`}
     >
-      <ScrollIndicator scrollProgress={scrollProgress} />
       <div className="container">
-        <nav className="flex items-center justify-between py-4 text-[#fbfbfc99]">
+        <nav className="flex items-center justify-between text-sm text-[#fbfbfc99]">
           <Logo />
           <div className="links-menu flex items-center gap-7">
             <AnimatePresence>
               {(isMenuOpen || isLargeScreen) && (
                 <SectionsLinks
                   linkVariants={linkVariants}
+                  isScrolled={isScrolled}
                   closeMenu={() => setMenuOpen(false)}
                 />
               )}
@@ -130,7 +102,7 @@ const Header = () => {
                   }
                 />
               </div>
-              <label className="btn btn-circle swap swap-rotate btn-sm bg-transparent md:hidden">
+              <label className="btn btn-circle swap swap-rotate btn-sm border-none bg-transparent md:hidden">
                 {/* this hidden checkbox controls the state */}
                 <input
                   type="checkbox"
