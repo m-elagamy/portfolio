@@ -10,6 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import SectionLoadingIndicator from "./components/SectionLoadingIndicator";
 import LazySection from "./components/LazySection";
 import LoadingIndicator from "./components/LoadingIndicator";
+import ScrollIndicator from "./components/sections/Header/ScrollIndicator";
 
 // Lazy Loaded Components
 const About = lazy(() => import("./components/sections/About"));
@@ -21,6 +22,8 @@ const Contact = lazy(() => import("./components/sections/Contact"));
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isScrolled, setScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const minimumDelay = 500; // The minimum delay ensures that the loading indicator is shown for at least 400ms.
@@ -36,6 +39,31 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    let animationFrameId: number;
+
+    const handleScroll = () => {
+      animationFrameId = requestAnimationFrame(() => {
+        const position = window.scrollY;
+        if (position > (innerWidth > 1440 ? 900 : 500)) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+
+        const totalHeight = document.body.scrollHeight - window.innerHeight;
+        const progress = totalHeight ? (position / totalHeight) * 100 : 0;
+        setScrollProgress(progress);
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
   return (
     <>
       <AnimatePresence>
@@ -44,7 +72,8 @@ const App = () => {
 
       {!isLoading && (
         <>
-          <Header />
+          <ScrollIndicator scrollProgress={scrollProgress} />
+          <Header isScrolled={isScrolled} />
           <main className="space-y-16">
             <Hero />
             <LazySection
