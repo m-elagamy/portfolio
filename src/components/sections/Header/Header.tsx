@@ -39,8 +39,11 @@ const Header = ({ isScrolled }: { isScrolled: boolean }) => {
   }, []);
 
   return (
-    <header
-      className={`fixed left-0 right-0 top-4 z-50 mx-auto max-w-sm rounded-full py-1 drop-shadow backdrop-blur transition-all duration-300 md:max-w-3xl ${isScrolled && "bg-black/50 shadow"}`}
+    <motion.header
+      className={`fixed left-0 right-0 top-4 z-50 mx-auto max-w-sm rounded-full py-1 drop-shadow-lg backdrop-blur md:max-w-3xl ${isScrolled && scrollY > 600 ? "bg-gradient-to-r from-gray-800/80 to-gray-700/70 shadow-lg" : "bg-transparent"}`}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: isScrolled ? 1 : 0, y: isScrolled ? 0 : -50 }}
+      transition={{ duration: 0.6 }}
     >
       <div className="container">
         <nav className="flex items-center justify-between text-sm text-[#fbfbfc99]">
@@ -137,7 +140,7 @@ const Header = ({ isScrolled }: { isScrolled: boolean }) => {
           </div>
         </nav>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
