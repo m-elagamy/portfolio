@@ -1,4 +1,4 @@
-import { lazy, useState, useEffect } from "react";
+import { lazy, useState, useEffect, useRef } from "react";
 
 import framerMotionComponents from "./utils/framerMotionComponents";
 const { AnimatePresence } = framerMotionComponents;
@@ -22,8 +22,10 @@ const Contact = lazy(() => import("./components/sections/Contact"));
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isScrolled, setScrolled] = useState(false);
+  const [isScrolled, setScrolled] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
+
+  const heroSectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const minimumDelay = 500; // The minimum delay ensures that the loading indicator is shown for at least 400ms.
@@ -45,10 +47,18 @@ const App = () => {
     const handleScroll = () => {
       animationFrameId = requestAnimationFrame(() => {
         const position = window.scrollY;
-        if (position > (innerWidth > 1440 ? 900 : 500)) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
+
+        if (heroSectionRef.current) {
+          const heroSectionRect =
+            heroSectionRef.current.getBoundingClientRect();
+          // Check if the hero section is completely out of view
+          if (heroSectionRect.bottom < 0) {
+            setScrolled(true);
+          } else if (heroSectionRect.top >= 0) {
+            setScrolled(true);
+          } else {
+            setScrolled(false);
+          }
         }
 
         const totalHeight = document.body.scrollHeight - window.innerHeight;
@@ -75,7 +85,7 @@ const App = () => {
           <ScrollIndicator scrollProgress={scrollProgress} />
           <Header isScrolled={isScrolled} />
           <main className="space-y-16">
-            <Hero />
+            <Hero heroSectionRef={heroSectionRef} />
             <LazySection
               component={About}
               fallback={<SectionLoadingIndicator />}
