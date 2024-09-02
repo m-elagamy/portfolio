@@ -1,8 +1,15 @@
 import HeroText from "./HeroSectionText";
 import ParticlesBackground from "./ParticlesBackground";
-const Hero = () => {
+const Hero = ({
+  heroSectionRef,
+}: {
+  heroSectionRef: React.RefObject<HTMLDivElement>;
+}) => {
   return (
-    <section className="hero relative z-10 min-h-screen bg-[#0F0F0F]">
+    <section
+      className="hero relative z-10 min-h-screen bg-[#0F0F0F]"
+      ref={heroSectionRef}
+    >
       <ParticlesBackground />
       <h2 className="sr-only">Hero Section</h2>
       <div className="container">
