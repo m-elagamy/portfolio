@@ -71,7 +71,7 @@ const ProjectSlide = ({ project, activeIndex, index }: ProjectSlideProps) => {
             <div className="mb-12 flex items-center gap-4 md:mb-0">
               <a
                 href={project.previewLink}
-                className="btn border-none bg-[#3bb5e6] tracking-wider text-white hover:bg-[#3399cc]"
+                className="btn btn-sm border-none bg-[#3bb5e6] tracking-wider text-white hover:bg-[#3399cc]"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -89,7 +89,7 @@ const ProjectSlide = ({ project, activeIndex, index }: ProjectSlideProps) => {
               </a>
               <a
                 href={project.codeLink}
-                className="btn border-none bg-gray-600 tracking-wider text-white hover:bg-gray-700"
+                className="btn btn-sm border-none bg-gray-600 tracking-wider text-white hover:bg-gray-700"
                 target="_blank"
                 rel="noopener noreferrer"
               >
