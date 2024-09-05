@@ -27,7 +27,7 @@ const ProjectSlide = ({ project, activeIndex, index }: ProjectSlideProps) => {
     <AnimatePresence>
       {activeIndex === index && (
         <motion.section
-          className="flex min-h-[616px] cursor-grab flex-wrap items-center rounded-lg bg-black/5 p-4 backdrop-blur-[2px] md:min-h-[450px] md:flex-nowrap md:gap-20"
+          className="flex min-h-[616px] cursor-grab flex-wrap items-center rounded-lg bg-black/40 p-4 backdrop-blur-[2px] md:min-h-[450px] md:flex-nowrap md:gap-20"
           layout
           initial="initial"
           animate={activeIndex === index ? "animate" : "initial"}
@@ -50,7 +50,9 @@ const ProjectSlide = ({ project, activeIndex, index }: ProjectSlideProps) => {
               <h3 className="mb-2 text-3xl font-bold text-white">
                 {project.title}
               </h3>
-              <p className="text-gray-300">{project.description}</p>
+              <p className="text-gray-300 shadow-neutral">
+                {project.description}
+              </p>
             </div>
 
             <ul className="flex flex-wrap items-center gap-2">
@@ -68,7 +70,7 @@ const ProjectSlide = ({ project, activeIndex, index }: ProjectSlideProps) => {
                 </li>
               ))}
             </ul>
-            <div className="mb-12 flex items-center gap-4 md:mb-0">
+            <div className="mb-12 flex items-center justify-center gap-4 md:justify-end lg:mb-0">
               <a
                 href={project.previewLink}
                 className="btn btn-sm border-none bg-[#3bb5e6] tracking-wider text-white hover:bg-[#3399cc]"
