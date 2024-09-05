@@ -49,6 +49,12 @@ export const technologiesArray = [
     link: "https://www.framer.com/motion/",
   },
   {
+    name: "AntDesign",
+    image:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/antdesign/antdesign-original.svg",
+    link: "https://ant.design/",
+  },
+  {
     name: "DaisyUI",
     image:
       "https://img.daisyui.com/images/daisyui-logo/daisyui-logomark-1024-1024.png",

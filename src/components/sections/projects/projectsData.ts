@@ -4,6 +4,7 @@ import todoImage from "../../../assets/images/To-Do.png";
 import ageCalcAge from "../../../assets/images/Age-Calculator.png";
 import weatherApp from "../../../assets/images/weather-app.png";
 import quizAppImage from "../../../assets/images/Quiz.png";
+import spaceTourismImage from "../../../assets/images/Destination-Space-Tourism.png";
 import reactImage from "../../../assets/images/React.png";
 import tailwindImage from "../../../assets/images/Tailwind CSS.png";
 import typScriptImage from "../../../assets/images/TypeScript.png";
@@ -12,6 +13,43 @@ import cssImage from "../../../assets/images/CSS3.png";
 import jsImage from "../../../assets/images/JavaScript.png";
 
 export const projects = [
+  {
+    id: 7,
+    image: spaceTourismImage,
+    title: "Space Tourism",
+    description:
+      "An immersive, multi-page space tourism website designed to give users a glimpse into the cosmos. Built with Next.js, Ant Design, Tailwind CSS, and Framer Motion for a smooth and dynamic user experience. 🌍✨",
+    techs: [
+      {
+        techName: "React",
+        techImage: reactImage,
+      },
+      {
+        techName: "Next.js",
+        techImage: "https://devicon-website.vercel.app/api/nextjs/original.svg",
+      },
+      {
+        techName: "TypeScript",
+        techImage: typScriptImage,
+      },
+      {
+        techName: "TailwindCSS",
+        techImage: tailwindImage,
+      },
+      {
+        techName: "Framer Motion",
+        techImage:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
+      },
+      {
+        techName: "Ant Design",
+        techImage:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/antdesign/antdesign-original.svg",
+      },
+    ],
+    previewLink: "https://space-tourism-mpw.netlify.app/",
+    codeLink: "https://github.com/Mahmoud-ElAgamy/Space-Tourism-MPW",
+  },
   {
     id: 1,
     image: multiStepFormImage,
