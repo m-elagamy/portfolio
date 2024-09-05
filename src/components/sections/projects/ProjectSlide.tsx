@@ -35,7 +35,7 @@ const ProjectSlide = ({ project, activeIndex, index }: ProjectSlideProps) => {
           variants={swiperVariants}
         >
           <h2 className="sr-only">Project</h2>
-          <figure className="max-w-lg">
+          <figure className="mb-4 max-w-lg md:mb-0">
             <img
               src={project.image}
               alt={project.title}
