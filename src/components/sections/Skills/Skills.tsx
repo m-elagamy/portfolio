@@ -18,11 +18,9 @@ const linkVariants = {
 const Skills = () => {
   return (
     <AnimatedSection sectionId="skills">
-      <h2 className="mx-auto mb-16 flex w-fit flex-col-reverse bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-3xl font-bold tracking-widest text-transparent lg:text-5xl">
+      <h2 className="section-title">
         MY TECH STACK
-        <small className="text-base font-medium text-[#727272] lg:text-lg">
-          TECHNOLOGIES & TOOLS I'VE BEEN WORKING WITH
-        </small>
+        <small>TECHNOLOGIES & TOOLS I'VE BEEN WORKING WITH</small>
       </h2>
       <ul className="flex flex-wrap items-center justify-center gap-10">
         {technologiesArray.map((tech, i) => (

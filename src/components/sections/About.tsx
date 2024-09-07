@@ -8,11 +8,9 @@ const { motion } = framerMotionComponents;
 const About = () => {
   return (
     <AnimatedSection sectionId="about">
-      <h2 className="mx-auto mb-16 flex w-fit flex-col-reverse bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-3xl font-bold tracking-widest text-transparent lg:text-5xl">
+      <h2 className="section-title">
         ABOUT ME
-        <small className="text-base font-medium text-[#727272] lg:text-lg">
-          AGAMY
-        </small>
+        <small>AGAMY</small>
       </h2>
       <figure>
         <motion.img
@@ -21,7 +19,6 @@ const About = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           src={profilePicture}
           alt="Mahmoud Elagamy Image"
-          loading="lazy"
           width={640}
           height={640}
           className="mx-auto mb-5 size-80 rounded-full border-2 bg-gradient-to-r from-slate-400 to-slate-500 p-1 shadow-2xl lg:size-96"
