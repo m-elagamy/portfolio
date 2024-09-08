@@ -13,7 +13,7 @@ const logoVariants = {
   },
 };
 
-function Logo() {
+function Logo({ isScrolled }: { isScrolled: boolean }) {
   return (
     <motion.a
       href="/"
@@ -30,7 +30,11 @@ function Logo() {
         alt="Mahmoud Elagamy Image"
         width={640}
         height={640}
-        className="size-8 rounded-full border-2 border-slate-700 bg-gradient-to-r from-slate-400 to-slate-500 p-[2px] shadow-lg"
+        className={`size-8 rounded-full border-2 ${
+          isScrolled
+            ? "border-[#3C3C3C] bg-gradient-to-r from-gray-800 to-gray-700"
+            : "border-[#2B2B2B] bg-gradient-to-r from-slate-400 to-slate-500"
+        } p-[2px] shadow-lg`}
       />
     </motion.a>
   );

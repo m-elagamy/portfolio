@@ -18,15 +18,13 @@ type SectionsLinksProps = {
 const sections = ["ABOUT", "SKILLS", "PROJECTS", "CONTACT"];
 
 const menuVariants = {
-  hidden: { opacity: 0, y: -50 },
+  hidden: {
+    opacity: 0,
+    y: -50,
+  },
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-      delay: innerWidth > 767 ? 0.6 : 0.2,
-    },
   },
 };
 
@@ -38,16 +36,15 @@ function SectionsLinks({
   return (
     <motion.ul
       className={`absolute ${isScrolled ? "left-0 w-full" : "-left-[15px] w-[108%]"} top-[45px] z-20 flex-col items-center rounded-xl bg-[#121212d8] text-center tracking-[0.3em] shadow-md md:static md:flex md:w-fit md:flex-row md:gap-5 md:bg-transparent md:p-0 md:shadow-none`}
+      variants={menuVariants}
       initial="hidden"
       animate="visible"
-      exit={{
-        opacity: 0,
-        y: -20,
-        transition: {
-          duration: 0.6,
-        },
+      exit="hidden"
+      transition={{
+        duration: 0.8,
+        ease: "easeInOut",
+        delay: innerWidth > 767 ? 0.6 : 0.2,
       }}
-      variants={menuVariants}
     >
       {sections.map((section, index) => (
         <motion.li
