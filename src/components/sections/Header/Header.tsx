@@ -47,7 +47,7 @@ const Header = ({ isScrolled }: { isScrolled: boolean }) => {
     >
       <div className="container">
         <nav className="flex items-center justify-between text-sm text-[#fbfbfc99]">
-          <Logo isScrolled={isScrolled} />
+          <Logo />
           <div className="links-menu flex items-center gap-7">
             <AnimatePresence>
               {(isMenuOpen || isLargeScreen) && (
