@@ -40,7 +40,7 @@ const Header = ({ isScrolled }: { isScrolled: boolean }) => {
 
   return (
     <motion.header
-      className={`fixed left-0 right-0 top-4 z-50 mx-auto max-w-sm rounded-full md:max-w-[700px] lg:max-w-3xl ${isScrolled && scrollY > 600 ? "bg-gradient-to-r from-gray-800/80 to-gray-700/70 shadow-md drop-shadow-md backdrop-blur-sm" : ""}`}
+      className={`fixed left-0 right-0 top-4 z-50 mx-auto max-w-sm rounded-full py-1 md:max-w-[700px] md:py-0 lg:max-w-3xl ${isScrolled && scrollY > 600 ? "bg-gradient-to-r from-gray-800/80 to-gray-700/70 shadow-md drop-shadow-md backdrop-blur-sm" : ""}`}
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: isScrolled ? 1 : 0, y: isScrolled ? 0 : -50 }}
       transition={{ duration: 0.6 }}
