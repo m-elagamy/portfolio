@@ -1,3 +1,5 @@
+import shadcnImage from "../../../assets/images/shadcn-ui.svg";
+
 export const technologiesArray = [
   {
     name: "HTML",
@@ -55,9 +57,14 @@ export const technologiesArray = [
     link: "https://ant.design/",
   },
   {
-    name: "DaisyUI",
+    name: "Daisy UI",
     image:
       "https://img.daisyui.com/images/daisyui-logo/daisyui-logomark-1024-1024.png",
     link: "https://daisyui.com/",
+  },
+  {
+    name: "Shadcn UI",
+    image: shadcnImage,
+    link: "https://ui.shadcn.com/",
   },
 ];

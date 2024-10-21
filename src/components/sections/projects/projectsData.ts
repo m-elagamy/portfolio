@@ -1,18 +1,55 @@
-import multiStepFormImage from "../../../assets/images/Multi-Step-Form.png";
-import restCountriesApiImage from "../../../assets/images/Rest-Countries-API-light.png";
-import todoImage from "../../../assets/images/To-Do.png";
-import ageCalcAge from "../../../assets/images/Age-Calculator.png";
-import weatherApp from "../../../assets/images/weather-app.png";
-import quizAppImage from "../../../assets/images/Quiz.png";
-import spaceTourismImage from "../../../assets/images/Destination-Space-Tourism.png";
+import multiStepFormImage from "../../../assets/images/projects/Multi-Step-Form.png";
+import restCountriesApiImage from "../../../assets/images/projects/Rest-Countries-API-light.png";
+import todoImage from "../../../assets/images/projects/To-Do.png";
+import ageCalcAge from "../../../assets/images/projects/Age-Calculator.png";
+import quizAppImage from "../../../assets/images/projects/Quiz.png";
+import spaceTourismImage from "../../../assets/images/projects/Destination-Space-Tourism.png";
+import climaticImage from "../../../assets/images/projects/Climatic-project.png";
 import reactImage from "../../../assets/images/React.png";
 import tailwindImage from "../../../assets/images/Tailwind CSS.png";
 import typScriptImage from "../../../assets/images/TypeScript.png";
+import shadcnImage from "../../../assets/images/shadcn-ui.svg";
 import htmlImage from "../../../assets/images/HTML5.png";
 import cssImage from "../../../assets/images/CSS3.png";
 import jsImage from "../../../assets/images/JavaScript.png";
 
 export const projects = [
+  {
+    id: 8,
+    image: climaticImage,
+    title: "Climatic App",
+    description:
+      "A responsive weather app with real-time forecasts, dynamic themes, and animations. Built with Next.js, React, TypeScript, and Tailwind CSS.",
+    techs: [
+      {
+        techName: "React",
+        techImage: reactImage,
+      },
+      {
+        techName: "Next.js",
+        techImage: "https://devicon-website.vercel.app/api/nextjs/original.svg",
+      },
+      {
+        techName: "TypeScript",
+        techImage: typScriptImage,
+      },
+      {
+        techName: "TailwindCSS",
+        techImage: tailwindImage,
+      },
+      {
+        techName: "Framer Motion",
+        techImage:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
+      },
+      {
+        techName: "Shadcn UI",
+        techImage: shadcnImage,
+      },
+    ],
+    previewLink: "https://climatic-app.netlify.app/",
+    codeLink: "https://github.com/Mahmoud-ElAgamy/next.js-weather-app",
+  },
   {
     id: 7,
     image: spaceTourismImage,
@@ -136,7 +173,6 @@ export const projects = [
     previewLink: "https://react-do-app.netlify.app/",
     codeLink: "https://github.com/Mahmoud-ElAgamy/React-to-do-app",
   },
-
   {
     id: 4,
     image: ageCalcAge,
@@ -160,30 +196,6 @@ export const projects = [
 
     previewLink: "https://mahmoud-elagamy.github.io/Age-calculator-app/",
     codeLink: "https://github.com/Mahmoud-ElAgamy/Age-calculator-app",
-  },
-  {
-    id: 5,
-    image: weatherApp,
-    title: "Weather App",
-    description:
-      "A weather app created using HTML, CSS, and JavaScript is a web-based application that displays real-time weather information for a specific location.It provides users with up-to-date weather conditions, forecasts, and other relevant data.",
-    techs: [
-      {
-        techName: "HTML",
-        techImage: htmlImage,
-      },
-      {
-        techName: "CSS",
-        techImage: cssImage,
-      },
-      {
-        techName: "JavaScript",
-        techImage: jsImage,
-      },
-    ],
-
-    previewLink: "https://mahmoud-elagamy.github.io/Weather-App/",
-    codeLink: "https://github.com/Mahmoud-ElAgamy/Weather-App",
   },
   {
     id: 6,
