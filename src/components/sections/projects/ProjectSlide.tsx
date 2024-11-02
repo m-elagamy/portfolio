@@ -17,32 +17,48 @@ type ProjectSlideProps = {
   index: number;
 };
 
+const swiperVariants = {
+  initial: { x: 50, scale: 0.8, opacity: 0 },
+  animate: {
+    x: 0,
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      ease: "easeOut",
+    },
+  },
+  exit: {
+    x: -50,
+    scale: 0.8,
+    opacity: 0,
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
+
 const ProjectSlide = ({ project, activeIndex, index }: ProjectSlideProps) => {
-  const swiperVariants = {
-    initial: { x: 100, scale: 0.8, opacity: 0 },
-    animate: { x: 0, scale: 1, opacity: 1, transition: { duration: 0.6 } },
-    exit: { x: -100, scale: 0.8, opacity: 0, transition: { duration: 0.6 } },
-  };
   return (
     <AnimatePresence>
       {activeIndex === index && (
         <motion.section
-          className="flex min-h-[616px] cursor-grab flex-wrap items-center rounded-lg bg-black/40 p-4 backdrop-blur-[2px] active:cursor-grabbing md:min-h-[450px] md:flex-nowrap md:gap-20"
+          className="flex min-h-[616px] cursor-grab flex-wrap items-center rounded-lg bg-black/40 p-4 backdrop-blur-[2px] active:cursor-grabbing md:min-h-[500px] md:flex-nowrap md:gap-20"
           layout
           initial="initial"
           animate={activeIndex === index ? "animate" : "initial"}
           exit="exit"
           variants={swiperVariants}
         >
-          <h2 className="sr-only">Project</h2>
-          <figure className="mb-4 max-w-lg md:mb-0">
+          <h2 className="sr-only">Project Details - {project.title}</h2>
+          <figure className="mb-4 w-full max-w-lg md:mb-0">
             <img
               src={project.image}
-              alt={project.title}
+              alt={`Screenshot of ${project.title}`}
               loading="lazy"
               width={1440}
               height={777}
-              className="w-full transform rounded-lg object-cover shadow-md"
+              className="w-full transform rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-[1.02]"
             />
           </figure>
           <div className="flex flex-col gap-8 text-start">
@@ -70,7 +86,7 @@ const ProjectSlide = ({ project, activeIndex, index }: ProjectSlideProps) => {
                 </li>
               ))}
             </ul>
-            <div className="mb-12 flex items-center justify-center gap-4 md:justify-end lg:mb-0">
+            <div className="mb-12 flex items-center justify-center gap-4 md:justify-start lg:mb-0">
               <a
                 href={project.previewLink}
                 className="btn btn-sm border-none bg-[#3bb5e6] tracking-wider text-white hover:bg-[#3399cc]"

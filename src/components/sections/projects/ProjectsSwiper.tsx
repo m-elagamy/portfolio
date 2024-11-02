@@ -26,8 +26,7 @@ const Projects = () => {
   return (
     <AnimatedSection sectionId="projects">
       <h2 className="section-title">
-        PROJECTS
-        <small>HIGHLIGHTING MY EXPERTISE</small>
+        PROJECTS <small>HIGHLIGHTING MY EXPERTISE</small>
       </h2>
       <Swiper
         className="rounded-lg"
@@ -41,7 +40,7 @@ const Projects = () => {
             return `<span class="${className}" data-tooltip="${title}"></span>`;
           },
         }}
-        speed={innerWidth > 768 ? 1200 : 600}
+        speed={innerWidth > 768 ? 1000 : 600}
         keyboard
         onSlideChange={handleSlideChange}
         lazyPreloadPrevNext={2}

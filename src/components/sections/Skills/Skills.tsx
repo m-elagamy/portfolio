@@ -11,7 +11,7 @@ const linkVariants = {
     y: 0,
     scale: 1,
     opacity: 1,
-    transition: { duration: 0.6, ease: "easeOut", delay: i * 0.3 },
+    transition: { duration: 0.6, ease: "easeOut", delay: i * 0.2 },
   }),
 };
 
@@ -19,10 +19,9 @@ const Skills = () => {
   return (
     <AnimatedSection sectionId="skills">
       <h2 className="section-title">
-        MY TECH STACK
-        <small>TECHNOLOGIES & TOOLS I'VE BEEN WORKING WITH</small>
+        MY TECH STACK <small>TECHNOLOGIES & TOOLS I'VE BEEN WORKING WITH</small>
       </h2>
-      <ul className="flex flex-wrap items-center justify-center gap-10">
+      <ul className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-10">
         {technologiesArray.map((tech, i) => (
           <motion.li
             key={tech.name}
@@ -39,7 +38,7 @@ const Skills = () => {
               className="inline-block transition duration-300 ease-in-out hover:scale-105"
             >
               <img
-                className="mx-auto"
+                className="mx-auto size-12"
                 src={tech.image}
                 alt={tech.name}
                 width={62}
