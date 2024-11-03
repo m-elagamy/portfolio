@@ -19,7 +19,7 @@ export const projects = [
     image: climaticImage,
     title: "Climatic App",
     description:
-      "A responsive weather app with real-time forecasts, dynamic themes, and animations. Built with Next.js, React, TypeScript, and Tailwind CSS.",
+      "A responsive weather app with real-time forecasts, and dynamic themes.",
     techs: [
       {
         techName: "React",
@@ -48,14 +48,14 @@ export const projects = [
       },
     ],
     previewLink: "https://climatic-app.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-ElAgamy/next.js-weather-app",
+    codeLink: "https://github.com/Mahmoud-Elagamy/next.js-weather-app",
   },
   {
     id: 7,
     image: spaceTourismImage,
     title: "Space Tourism",
     description:
-      "An immersive, multi-page space tourism website designed to give users a glimpse into the cosmos. Built with Next.js, Ant Design, Tailwind CSS, and Framer Motion for a smooth and dynamic user experience. 🌍✨",
+      "A multi-page website offering an immersive space exploration experience.",
     techs: [
       {
         techName: "React",
@@ -85,14 +85,14 @@ export const projects = [
       },
     ],
     previewLink: "https://space-tourism-mpw.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-ElAgamy/Space-Tourism-MPW",
+    codeLink: "https://github.com/Mahmoud-Elagamy/Space-Tourism-MPW",
   },
   {
     id: 1,
     image: multiStepFormImage,
     title: "Multi Step Form",
     description:
-      "This project is a multi-step form built with React and Tailwind CSS. The form allows users to navigate through different steps, select a pricing plan, choose add-ons, and view a summary of their selections before submission.",
+      "A step-by-step form to select a plan, add-ons, and view a summary.",
     techs: [
       {
         techName: "React",
@@ -118,14 +118,14 @@ export const projects = [
       },
     ],
     previewLink: "https://multi-step-form-3.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-ElAgamy/Multi-Step-Form",
+    codeLink: "https://github.com/Mahmoud-Elagamy/Multi-Step-Form",
   },
   {
     id: 2,
     image: restCountriesApiImage,
     title: "Rest Countries API",
     description:
-      "A comprehensive React application showcasing world countries with interactive features and stunning visuals. Built with TypeScript for type safety, Tailwind CSS for rapid UI development, and Framer Motion for dynamic animations.",
+      "Showcases world countries with interactive details and visuals.",
     techs: [
       {
         techName: "React",
@@ -142,14 +142,14 @@ export const projects = [
     ],
 
     previewLink: "https://rest-countries-api-app2.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-ElAgamy/Rest-Countries-API",
+    codeLink: "https://github.com/Mahmoud-Elagamy/Rest-Countries-API",
   },
   {
     id: 3,
     image: todoImage,
     title: "To-Do App",
     description:
-      "A task management app built with React and TypeScript, featuring drag-and-drop functionality and dark mode.",
+      "A task management app, featuring drag-and-drop functionality and dark mode.",
     techs: [
       {
         techName: "React",
@@ -171,7 +171,7 @@ export const projects = [
     ],
 
     previewLink: "https://react-do-app.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-ElAgamy/React-to-do-app",
+    codeLink: "https://github.com/Mahmoud-Elagamy/React-to-do-app",
   },
   {
     id: 4,
@@ -195,14 +195,14 @@ export const projects = [
     ],
 
     previewLink: "https://mahmoud-elagamy.github.io/Age-calculator-app/",
-    codeLink: "https://github.com/Mahmoud-ElAgamy/Age-calculator-app",
+    codeLink: "https://github.com/Mahmoud-Elagamy/Age-calculator-app",
   },
   {
     id: 6,
     image: quizAppImage,
     title: "Quiz App",
     description:
-      "This HTML, CSS, and JavaScript quiz app tests users' knowledge about the life of Prophet Muhammad (peace be upon him). It features multiple-choice questions, instant feedback, and aims to be an engaging learning tool.",
+      "Interactive quiz on the life of Prophet Muhammad (PBUH) with feedback.",
     techs: [
       {
         techName: "HTML",
@@ -219,6 +219,6 @@ export const projects = [
     ],
 
     previewLink: "https://mahmoud-elagamy.github.io/Quiz-App/",
-    codeLink: "https://github.com/Mahmoud-ElAgamy/Quiz-App",
+    codeLink: "https://github.com/Mahmoud-Elagamy/Quiz-App",
   },
 ];

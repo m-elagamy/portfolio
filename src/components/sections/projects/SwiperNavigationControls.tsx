@@ -5,7 +5,7 @@ const SwiperNavigationControls = () => {
     <div className="absolute left-0 top-1/2 z-[1] hidden w-full -translate-y-1/2 items-center justify-between px-2 *:bg-black/50 *:shadow-md md:flex">
       <button
         id="nav-left"
-        className="btn btn-sm border-none shadow-lg hover:scale-105 hover:bg-black/70"
+        className="btn btn-sm relative border-none shadow-lg hover:scale-105 hover:bg-black/70"
         type="button"
         title="Previous Slide"
         aria-label="Previous slide"

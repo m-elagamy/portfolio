@@ -71,7 +71,7 @@ const Header = ({ isScrolled }: { isScrolled: boolean }) => {
             >
               <div>
                 <SocialLink
-                  link="https://github.com/Mahmoud-ElAgamy"
+                  link="https://github.com/Mahmoud-Elagamy"
                   title="Github"
                   icon={
                     <svg

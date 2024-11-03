@@ -1,5 +1,3 @@
-import { SetStateAction, useState } from "react";
-
 // Swiper Library
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, Navigation, Pagination } from "swiper/modules";
@@ -16,42 +14,31 @@ import SwiperNavigationControls from "./SwiperNavigationControls";
 import { projects } from "./projectsData";
 
 const Projects = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleSlideChange = (swiper: {
-    activeIndex: SetStateAction<number>;
-  }) => {
-    setActiveIndex(swiper.activeIndex);
-  };
   return (
     <AnimatedSection sectionId="projects">
       <h2 className="section-title">
         PROJECTS <small>HIGHLIGHTING MY EXPERTISE</small>
       </h2>
       <Swiper
-        className="rounded-lg"
-        modules={[Navigation, Pagination, Keyboard]}
+        modules={[Navigation, Keyboard, Pagination]}
         navigation={{ nextEl: "#nav-right", prevEl: "#nav-left" }}
-        pagination={{
-          clickable: true,
-          renderBullet: function (index, className) {
-            const slides = document.querySelectorAll(".swiper-slide");
-            const title = slides[index]?.getAttribute("data-title") || "";
-            return `<span class="${className}" data-tooltip="${title}"></span>`;
+        keyboard
+        slidesPerView={1}
+        breakpoints={{
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
           },
         }}
-        speed={innerWidth > 768 ? 1000 : 600}
-        keyboard
-        onSlideChange={handleSlideChange}
-        lazyPreloadPrevNext={2}
+        spaceBetween={32}
+        pagination={{ clickable: true }}
+        className="!pb-12"
       >
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <SwiperSlide key={project.id} data-title={project.title}>
-            <ProjectSlide
-              project={project}
-              activeIndex={activeIndex}
-              index={index}
-            />
+            <ProjectSlide project={project} />
           </SwiperSlide>
         ))}
         <SwiperNavigationControls />
