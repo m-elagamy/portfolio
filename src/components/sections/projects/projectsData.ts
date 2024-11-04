@@ -139,6 +139,11 @@ export const projects = [
         techName: "TypeScript",
         techImage: typScriptImage,
       },
+      {
+        techName: "Framer Motion",
+        techImage:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
+      },
     ],
 
     previewLink: "https://rest-countries-api-app2.netlify.app/",
