@@ -4,8 +4,8 @@ import framerMotionComponents from "./utils/framerMotionComponents";
 const { AnimatePresence } = framerMotionComponents;
 
 // Custom Components
-import Header from "./components/sections/header/Header";
-import Hero from "./components/sections/hero/Hero";
+import Header from "./components/sections/header-section/Header";
+import Hero from "./components/sections/hero-section/Hero";
 import ScrollToTop from "./components/ScrollToTop";
 import SectionLoadingIndicator from "./components/SectionLoadingIndicator";
 import LazySection from "./components/LazySection";
@@ -14,9 +14,11 @@ import ScrollIndicator from "./components/ScrollIndicator";
 
 // Lazy Loaded Components
 const About = lazy(() => import("./components/sections/About"));
-const Skills = lazy(() => import("./components/sections/skills/Skills"));
+const Skills = lazy(
+  () => import("./components/sections/skills-section/Skills"),
+);
 const Projects = lazy(
-  () => import("./components/sections/projects/ProjectsSwiper"),
+  () => import("./components/sections/projects-section/ProjectsSwiper"),
 );
 const Contact = lazy(() => import("./components/sections/Contact"));
 
