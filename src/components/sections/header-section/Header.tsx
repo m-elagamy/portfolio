@@ -39,7 +39,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`bg-[#0F0F0F] py-6`}>
+    <header className={`bg-[#0F0F0F] pt-6`}>
       <div className="container">
         <nav className="flex items-center justify-between text-sm text-[#fbfbfc99]">
           <Logo />
