@@ -14,10 +14,8 @@ const Hero = ({
       <h2 className="sr-only">Hero Section</h2>
       <div className="container">
         <div className="hero">
-          <div className="hero-content p-0 text-center">
-            <div className="max-w-3xl">
-              <HeroText />
-            </div>
+          <div className="hero-content min-h-24 p-0 text-center">
+            <HeroText />
           </div>
         </div>
       </div>
