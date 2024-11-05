@@ -21,6 +21,7 @@ function Logo() {
       animate="visible"
     >
       <CodeXml className="size-6 text-[#3bb5e6] md:size-8" />
+      <span className="sr-only">Logo</span>
     </motion.a>
   );
 }
