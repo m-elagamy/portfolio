@@ -5,7 +5,7 @@ const { AnimatePresence } = framerMotionComponents;
 
 // Custom Components
 import Header from "./components/sections/header/Header";
-import Hero from "./components/sections/hero/HeroSection";
+import Hero from "./components/sections/hero/Hero";
 import ScrollToTop from "./components/ScrollToTop";
 import SectionLoadingIndicator from "./components/SectionLoadingIndicator";
 import LazySection from "./components/LazySection";

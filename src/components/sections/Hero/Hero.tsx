@@ -1,4 +1,4 @@
-import HeroText from "./HeroSectionText";
+import HeroText from "./HeroText";
 import ParticlesBackground from "./ParticlesBackground";
 const Hero = ({
   heroSectionRef,
