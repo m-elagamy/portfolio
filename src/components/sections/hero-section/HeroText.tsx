@@ -46,6 +46,7 @@ const HeroText = () => {
           animate="visible"
           exit="exit"
           aria-live="polite"
+          className="w-full"
         >
           <motion.h1
             variants={itemVariants}
@@ -69,6 +70,7 @@ const HeroText = () => {
           animate="visible"
           exit="exit"
           aria-live="polite"
+          className="w-full"
         >
           <motion.h1
             variants={itemVariants}

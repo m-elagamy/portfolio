@@ -51,7 +51,7 @@ const App = () => {
         <>
           <ScrollIndicator />
           <Header />
-          <main className="space-y-16">
+          <main className="flex flex-col gap-16">
             <Hero heroSectionRef={heroSectionRef} />
             <LazySection
               component={About}

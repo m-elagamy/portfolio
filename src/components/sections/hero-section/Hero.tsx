@@ -6,17 +6,12 @@ const Hero = ({
   heroSectionRef: React.RefObject<HTMLDivElement>;
 }) => {
   return (
-    <section
-      className="hero relative z-10 min-h-screen bg-[#0F0F0F]"
-      ref={heroSectionRef}
-    >
+    <section className="hero relative z-10 bg-[#0F0F0F]" ref={heroSectionRef}>
       <ParticlesBackground />
       <h2 className="sr-only">Hero Section</h2>
       <div className="container">
-        <div className="hero">
-          <div className="hero-content min-h-24 p-0 text-center">
-            <HeroText />
-          </div>
+        <div className="mx-auto min-h-24 min-w-[288px] text-center md:w-[527px]">
+          <HeroText />
         </div>
       </div>
     </section>
