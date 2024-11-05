@@ -1,6 +1,7 @@
 // Utils
 import framerMotionComponents from "../../../utils/framerMotionComponents";
 const { motion } = framerMotionComponents;
+import { CodeXml } from "lucide-react";
 
 const logoVariants = {
   hidden: { opacity: 0, y: -50 },
@@ -18,9 +19,8 @@ function Logo() {
       variants={logoVariants}
       initial="hidden"
       animate="visible"
-      className="bg-gradient-to-r from-[#fd47b4] to-[#3bb5e6] bg-clip-text font-mono text-xl font-bold text-transparent"
     >
-      &lt;/&gt;
+      <CodeXml className="size-6 text-[#3bb5e6] md:size-8" />
     </motion.a>
   );
 }

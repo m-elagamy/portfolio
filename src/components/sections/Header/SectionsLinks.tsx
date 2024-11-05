@@ -1,6 +1,7 @@
 // Utils
 import framerMotionComponents from "../../../utils/framerMotionComponents";
 const { motion } = framerMotionComponents;
+
 // Types
 type SectionsLinksProps = {
   linkVariants: {
@@ -12,7 +13,6 @@ type SectionsLinksProps = {
     };
   };
   closeMenu: () => void;
-  isScrolled: boolean;
 };
 
 const sections = ["ABOUT", "SKILLS", "PROJECTS", "CONTACT"];
@@ -28,14 +28,10 @@ const menuVariants = {
   },
 };
 
-function SectionsLinks({
-  linkVariants,
-  closeMenu,
-  isScrolled,
-}: SectionsLinksProps) {
+function SectionsLinks({ linkVariants, closeMenu }: SectionsLinksProps) {
   return (
     <motion.ul
-      className={`absolute ${isScrolled ? "left-0 w-full" : "-left-[15px] w-[108%]"} top-[45px] z-20 flex-col items-center rounded-xl bg-[#121212d8] text-center tracking-[0.3em] shadow-md md:static md:flex md:w-fit md:flex-row md:gap-5 md:bg-transparent md:p-0 md:shadow-none`}
+      className={`absolute -left-[15px] top-[80px] z-20 w-[108%] flex-col items-center rounded-xl bg-[#121212d8] text-center text-base tracking-[0.3em] shadow-md md:static md:flex md:w-fit md:flex-row md:gap-5 md:bg-transparent md:p-0 md:shadow-none`}
       variants={menuVariants}
       initial="hidden"
       animate="visible"

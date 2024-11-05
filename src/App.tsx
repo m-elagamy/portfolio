@@ -4,17 +4,17 @@ import framerMotionComponents from "./utils/framerMotionComponents";
 const { AnimatePresence } = framerMotionComponents;
 
 // Custom Components
-import Header from "./components/sections/Header/Header";
-import Hero from "./components/sections/Hero/HeroSection";
+import Header from "./components/sections/header/Header";
+import Hero from "./components/sections/hero/HeroSection";
 import ScrollToTop from "./components/ScrollToTop";
 import SectionLoadingIndicator from "./components/SectionLoadingIndicator";
 import LazySection from "./components/LazySection";
 import LoadingIndicator from "./components/LoadingIndicator";
-import ScrollIndicator from "./components/sections/Header/ScrollIndicator";
+import ScrollIndicator from "./components/ScrollIndicator";
 
 // Lazy Loaded Components
 const About = lazy(() => import("./components/sections/About"));
-const Skills = lazy(() => import("./components/sections/Skills/Skills"));
+const Skills = lazy(() => import("./components/sections/skills/Skills"));
 const Projects = lazy(
   () => import("./components/sections/projects/ProjectsSwiper"),
 );
@@ -22,8 +22,6 @@ const Contact = lazy(() => import("./components/sections/Contact"));
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [isScrolled, setScrolled] = useState(true);
-  const [scrollProgress, setScrollProgress] = useState(0);
 
   const heroSectionRef = useRef<HTMLDivElement | null>(null);
 
@@ -41,39 +39,6 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    let animationFrameId: number;
-
-    const handleScroll = () => {
-      animationFrameId = requestAnimationFrame(() => {
-        const position = window.scrollY;
-
-        if (heroSectionRef.current) {
-          const heroSectionRect =
-            heroSectionRef.current.getBoundingClientRect();
-          // Check if the hero section is completely out of view
-          if (heroSectionRect.bottom < 0) {
-            setScrolled(true);
-          } else if (heroSectionRect.top >= 0) {
-            setScrolled(true);
-          } else {
-            setScrolled(false);
-          }
-        }
-
-        const totalHeight = document.body.scrollHeight - window.innerHeight;
-        const progress = totalHeight ? (position / totalHeight) * 100 : 0;
-        setScrollProgress(progress);
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, []);
-
   return (
     <>
       <AnimatePresence>
@@ -82,8 +47,8 @@ const App = () => {
 
       {!isLoading && (
         <>
-          <ScrollIndicator scrollProgress={scrollProgress} />
-          <Header isScrolled={isScrolled} />
+          <ScrollIndicator />
+          <Header />
           <main className="space-y-16">
             <Hero heroSectionRef={heroSectionRef} />
             <LazySection

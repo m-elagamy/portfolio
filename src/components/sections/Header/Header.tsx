@@ -18,18 +18,18 @@ const linkVariants = {
   }),
 };
 
-const Header = ({ isScrolled }: { isScrolled: boolean }) => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen((prevState) => !prevState);
+    setIsMenuOpen((prevState) => !prevState);
   };
 
   useEffect(() => {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 768);
-      if (window.innerWidth >= 768) setMenuOpen(false);
+      if (window.innerWidth >= 768) setIsMenuOpen(false);
     };
 
     handleResize();
@@ -39,12 +39,7 @@ const Header = ({ isScrolled }: { isScrolled: boolean }) => {
   }, []);
 
   return (
-    <motion.header
-      className={`fixed left-0 right-0 top-4 z-50 mx-auto max-w-sm rounded-full py-1 md:max-w-[700px] md:py-0 lg:max-w-3xl ${isScrolled && scrollY > 600 ? "bg-gradient-to-r from-gray-800/80 to-gray-700/70 shadow-md drop-shadow-md backdrop-blur-sm" : ""}`}
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: isScrolled ? 1 : 0, y: isScrolled ? 0 : -50 }}
-      transition={{ duration: 0.6 }}
-    >
+    <header className={`bg-[#0F0F0F] py-6`}>
       <div className="container">
         <nav className="flex items-center justify-between text-sm text-[#fbfbfc99]">
           <Logo />
@@ -53,8 +48,7 @@ const Header = ({ isScrolled }: { isScrolled: boolean }) => {
               {(isMenuOpen || isLargeScreen) && (
                 <SectionsLinks
                   linkVariants={linkVariants}
-                  isScrolled={isScrolled}
-                  closeMenu={() => setMenuOpen(false)}
+                  closeMenu={() => setIsMenuOpen(false)}
                 />
               )}
             </AnimatePresence>
@@ -140,7 +134,7 @@ const Header = ({ isScrolled }: { isScrolled: boolean }) => {
           </div>
         </nav>
       </div>
-    </motion.header>
+    </header>
   );
 };
 

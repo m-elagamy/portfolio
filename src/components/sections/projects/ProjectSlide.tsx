@@ -15,7 +15,7 @@ type ProjectSlideProps = {
 
 const ProjectSlide = ({ project }: ProjectSlideProps) => {
   return (
-    <article className="flex min-h-[470px] cursor-grab flex-col items-center justify-between overflow-hidden rounded-2xl border bg-white shadow-md active:cursor-grabbing">
+    <article className="flex min-h-[470px] cursor-grab flex-col items-center justify-between overflow-hidden rounded-2xl border bg-white shadow active:cursor-grabbing">
       <h2 className="sr-only">Project Details - {project.title}</h2>
       <figure>
         <img
