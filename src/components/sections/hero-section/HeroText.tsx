@@ -36,49 +36,47 @@ const HeroText = () => {
   };
 
   return (
-    <>
-      <AnimatePresence mode="wait">
-        {stage === 0 ? (
-          <motion.div
-            key="intro"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            aria-live="polite"
+    <AnimatePresence mode="wait">
+      {stage === 0 ? (
+        <motion.div
+          key="intro"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          aria-live="polite"
+        >
+          <motion.h1
+            variants={itemVariants}
+            className="mx-auto mb-4 w-fit bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-lg font-bold tracking-widest text-transparent lg:text-2xl"
           >
-            <motion.h1
-              variants={itemVariants}
-              className="mx-auto mb-2 w-fit bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-lg font-bold tracking-widest text-transparent lg:text-2xl"
-            >
-              HEY I AM
-            </motion.h1>
-            <motion.h1
-              variants={itemVariants}
-              className="text-2xl font-bold tracking-widest text-[#fbfbfc] lg:text-5xl"
-            >
-              MAHMOUD ELAGAMY
-            </motion.h1>
-          </motion.div>
-        ) : (
-          <motion.div
-            key="details"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            aria-live="polite"
+            HEY I AM
+          </motion.h1>
+          <motion.h1
+            variants={itemVariants}
+            className="text-2xl font-bold tracking-widest text-[#fbfbfc] md:text-4xl"
           >
-            <motion.h1
-              variants={itemVariants}
-              className="text-xl font-bold tracking-widest text-[#fbfbfc] lg:text-5xl"
-            >
-              A FRONT END DEVELOPER
-            </motion.h1>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+            MAHMOUD ELAGAMY
+          </motion.h1>
+        </motion.div>
+      ) : (
+        <motion.div
+          key="details"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          aria-live="polite"
+        >
+          <motion.h1
+            variants={itemVariants}
+            className="text-2xl font-bold tracking-widest text-[#fbfbfc] md:text-4xl"
+          >
+            A FRONT END DEVELOPER
+          </motion.h1>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
