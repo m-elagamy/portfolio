@@ -20,7 +20,7 @@ body {
 }
 
 /* Hero Section */
-.hero {
+.hero-section {
   min-height: calc(100vh - 56.5px);
 
   @media screen and (min-width: 768px) {

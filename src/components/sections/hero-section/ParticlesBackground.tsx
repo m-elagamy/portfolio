@@ -75,7 +75,7 @@ const ParticlesBackground = () => {
   return (
     <div
       id="tsparticles"
-      className="absolute inset-0"
+      className="absolute inset-0 -z-[1]"
       ref={particlesContainer}
     ></div>
   );

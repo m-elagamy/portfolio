@@ -39,7 +39,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`bg-[#0F0F0F] pt-6`}>
+    <header className={`min-h-[56.5px] bg-[#0F0F0F] pt-6 md:min-h-[72px]`}>
       <div className="container">
         <nav className="flex items-center justify-between text-sm text-[#fbfbfc99]">
           <Logo />
