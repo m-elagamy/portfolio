@@ -183,7 +183,7 @@ export const projects = [
     image: ageCalcAge,
     title: "Age Calculator App",
     description:
-      "This application allows you to know your current age by entering you date of birth.",
+      "This application allows you to know your current age by entering your date of birth.",
     techs: [
       {
         techName: "HTML",
