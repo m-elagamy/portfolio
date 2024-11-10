@@ -85,7 +85,7 @@ export const projects = [
       },
     ],
     previewLink: "https://space-tourism-mpw.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-Elagamy/Space-Tourism-MPW",
+    codeLink: "https://github.com/Mahmoud-Elagamy/space-tourism-MPW",
   },
   {
     id: 1,
@@ -118,7 +118,7 @@ export const projects = [
       },
     ],
     previewLink: "https://multi-step-form-3.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-Elagamy/Multi-Step-Form",
+    codeLink: "https://github.com/Mahmoud-Elagamy/multi-step-form",
   },
   {
     id: 2,
@@ -147,7 +147,7 @@ export const projects = [
     ],
 
     previewLink: "https://rest-countries-api-app2.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-Elagamy/Rest-Countries-API",
+    codeLink: "https://github.com/Mahmoud-Elagamy/rest-countries-app",
   },
   {
     id: 3,
@@ -176,14 +176,14 @@ export const projects = [
     ],
 
     previewLink: "https://react-do-app.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-Elagamy/React-to-do-app",
+    codeLink: "https://github.com/Mahmoud-Elagamy/to-do-app",
   },
   {
     id: 4,
     image: ageCalcAge,
     title: "Age Calculator App",
     description:
-      "This application allows you to know your current age by entering your date of birth.",
+      "This application allows you to know your current age by entering your   date of birth.",
     techs: [
       {
         techName: "HTML",
