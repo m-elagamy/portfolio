@@ -5,13 +5,13 @@ import ageCalcAge from "../../../assets/images/projects/Age-Calculator.png";
 import quizAppImage from "../../../assets/images/projects/Quiz.png";
 import spaceTourismImage from "../../../assets/images/projects/Destination-Space-Tourism.png";
 import climaticImage from "../../../assets/images/projects/Climatic-project.png";
-import reactImage from "../../../assets/images/React.png";
-import tailwindImage from "../../../assets/images/Tailwind CSS.png";
-import typScriptImage from "../../../assets/images/TypeScript.png";
-import shadcnImage from "../../../assets/images/shadcn-ui.svg";
-import htmlImage from "../../../assets/images/HTML5.png";
-import cssImage from "../../../assets/images/CSS3.png";
-import jsImage from "../../../assets/images/JavaScript.png";
+import reactImage from "../../../assets/images/skills/React.png";
+import tailwindImage from "../../../assets/images/skills/Tailwind CSS.png";
+import typScriptImage from "../../../assets/images/skills/TypeScript.png";
+import shadcnImage from "../../../assets/images/skills/shadcn-ui.svg";
+import htmlImage from "../../../assets/images/skills/HTML5.png";
+import cssImage from "../../../assets/images/skills/CSS3.png";
+import jsImage from "../../../assets/images/skills/JavaScript.png";
 
 export const projects = [
   {

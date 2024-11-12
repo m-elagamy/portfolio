@@ -1,4 +1,4 @@
-import shadcnImage from "../../../assets/images/shadcn-ui.svg";
+import shadcnImage from "../../../assets/images/skills/shadcn-ui.svg";
 
 export const technologiesArray = [
   {
