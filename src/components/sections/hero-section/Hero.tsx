@@ -7,7 +7,7 @@ const Hero = ({
 }) => {
   return (
     <section
-      className="hero-section relative z-10 flex items-center justify-center bg-[#0F0F0F]"
+      className="hero-section hero-theme relative z-10 flex items-center justify-center"
       ref={heroSectionRef}
     >
       <ParticlesBackground />

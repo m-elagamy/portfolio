@@ -4,7 +4,7 @@ const { motion } = framerMotionComponents;
 const LoadingIndicator = () => {
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-[#0F0F0F] opacity-100"
+      className="hero-theme fixed inset-0 z-50 flex items-center justify-center opacity-100"
       initial={{ scale: 1 }}
       animate={{ scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}

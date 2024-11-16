@@ -1,10 +1,11 @@
 // Utils
+import { useRef, useState } from "react";
 import framerMotionComponents from "../../../utils/framerMotionComponents";
 const { motion } = framerMotionComponents;
 
 // Types
 type SectionsLinksProps = {
-  linkVariants: {
+  linkVariants?: {
     hidden: { opacity: number; y: number };
     visible: (i: number) => {
       opacity: number;
@@ -12,55 +13,108 @@ type SectionsLinksProps = {
       transition: { duration: number; ease: string };
     };
   };
-  closeMenu: () => void;
 };
 
 const sections = ["ABOUT", "SKILLS", "PROJECTS", "CONTACT"];
 
-const menuVariants = {
-  hidden: {
-    opacity: 0,
-    y: -50,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-};
+function SectionsLinks({ linkVariants }: SectionsLinksProps) {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const drawerRef = useRef<HTMLInputElement>(null);
 
-function SectionsLinks({ linkVariants, closeMenu }: SectionsLinksProps) {
+  const closeDrawer = () => {
+    if (drawerRef.current) setIsDrawerOpen((drawerRef.current.checked = false));
+  };
+
+  const handleToggle = () => {
+    if (drawerRef.current) {
+      setIsDrawerOpen(drawerRef.current.checked);
+    }
+  };
+
   return (
-    <motion.ul
-      className={`absolute -left-[15px] top-[80px] z-20 w-[108%] flex-col items-center rounded-xl bg-[#121212d8] text-center text-base tracking-[0.3em] shadow-md md:static md:flex md:w-fit md:flex-row md:gap-5 md:bg-transparent md:p-0 md:shadow-none`}
-      variants={menuVariants}
-      initial="hidden"
-      animate="visible"
-      exit="hidden"
-      transition={{
-        duration: 0.8,
-        ease: "easeInOut",
-        delay: innerWidth > 767 ? 0.6 : 0.2,
-      }}
-    >
-      {sections.map((section, index) => (
-        <motion.li
-          key={section}
-          custom={index}
-          variants={linkVariants}
-          initial="hidden"
-          animate="visible"
-          className="border-y border-[#6767671e] md:border-none"
-          onClick={closeMenu}
-        >
-          <a
-            href={`#${section.toLowerCase()}`}
-            className="relative inline-block w-full py-3 transition-all duration-300 before:left-0 before:top-3/4 before:h-[2px] before:w-full before:origin-left before:scale-x-0 before:rounded before:bg-gradient-to-r before:from-[#fd47b4] before:to-[#3bb5e6] before:transition-all before:duration-300 hover:text-slate-100 hover:before:scale-x-75 md:before:absolute"
+    <>
+      <ul className="menu menu-horizontal hidden text-base md:flex">
+        {sections.map((section, index) => (
+          <motion.li
+            key={section}
+            custom={index}
+            variants={linkVariants}
+            initial="hidden"
+            animate="visible"
           >
-            {section}
-          </a>
-        </motion.li>
-      ))}
-    </motion.ul>
+            <a
+              href={`#${section.toLowerCase()}`}
+              className="transition duration-300 before:left-1/2 before:top-[80%] before:h-[2px] before:w-full before:-translate-x-1/2 before:scale-x-0 before:rounded before:bg-gradient-to-r before:from-[#fd47b4] before:to-[#3bb5e6] before:transition before:duration-300 hover:text-slate-100 hover:before:scale-x-75 md:before:absolute"
+            >
+              {section}
+            </a>
+          </motion.li>
+        ))}
+      </ul>
+
+      {/* Drawer */}
+      <motion.div
+        className="drawer-end"
+        variants={linkVariants}
+        custom={2.4}
+        initial="hidden"
+        animate="visible"
+      >
+        <input
+          ref={drawerRef}
+          id="my-drawer"
+          type="checkbox"
+          className="drawer-toggle"
+          onChange={handleToggle}
+        />
+        <label
+          htmlFor="my-drawer"
+          className="btn drawer-button btn-sm border-white/5 px-1 md:hidden"
+          aria-label={`${isDrawerOpen ? "Close" : "Open"} sidebar`}
+          aria-expanded={isDrawerOpen}
+        >
+          <motion.svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            className="h-6 w-6 stroke-current"
+            animate={isDrawerOpen ? { rotate: 90 } : { rotate: 0 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <motion.path
+              d={
+                isDrawerOpen
+                  ? "M6 18L18 6M6 6l12 12"
+                  : "M4 6h16M4 12h16M4 18h16"
+              }
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+            />
+          </motion.svg>
+        </label>
+        <div className="drawer-side top-16 z-20">
+          <label
+            htmlFor="my-drawer"
+            aria-label="close sidebar"
+            className="drawer-overlay !bg-transparent"
+          ></label>
+          <ul className="menu w-full rounded-lg border border-white/5 bg-gradient-to-r from-[#0A0A0F]/25 to-[#1A1A24]/25 backdrop-blur-sm">
+            {sections.map((section) => (
+              <li key={section}>
+                <a
+                  href={`#${section.toLowerCase()}`}
+                  className="py-3 text-center transition duration-300 before:left-1/2 before:top-[80%] before:h-[2px] before:w-full before:-translate-x-1/2 before:scale-x-0 before:rounded before:bg-gradient-to-r before:from-[#fd47b4] before:to-[#3bb5e6] before:transition before:duration-300 hover:text-slate-100 hover:before:scale-x-75 md:before:absolute"
+                  onClick={closeDrawer}
+                >
+                  {section}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </motion.div>
+    </>
   );
 }
 

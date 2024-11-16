@@ -21,10 +21,10 @@ body {
 
 /* Hero Section */
 .hero-section {
-  min-height: calc(100vh - 56.5px);
+  min-height: calc(100vh - 57px);
 
   @media screen and (min-width: 768px) {
-    min-height: calc(100vh - 72px);
+    min-height: calc(100vh - 80px);
   }
 }
 
@@ -47,4 +47,8 @@ footer section {
 
 .section-title small {
   @apply text-base font-medium text-[#727272] lg:text-lg;
+}
+
+.hero-theme {
+  @apply bg-gradient-to-r from-[#0A0A0F] to-[#1A1A24];
 }

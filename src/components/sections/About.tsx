@@ -9,8 +9,7 @@ const About = () => {
   return (
     <AnimatedSection sectionId="about">
       <h2 className="section-title">
-        ABOUT ME
-        <small>AGAMY</small>
+        ABOUT ME <small>AGAMY</small>
       </h2>
       <figure>
         <motion.img
@@ -21,7 +20,7 @@ const About = () => {
           alt="Mahmoud Elagamy Image"
           width={640}
           height={640}
-          className="mx-auto mb-5 size-72 rounded-full border-2 bg-gradient-to-r from-slate-400 to-slate-500 p-1 shadow-2xl lg:size-80"
+          className="mx-auto mb-5 size-64 rounded-full border-2 bg-gradient-to-r from-slate-400 to-slate-500 p-1 shadow-2xl lg:size-80"
         />
       </figure>
       <div className="mx-auto max-w-2xl space-y-4 lg:text-lg">
