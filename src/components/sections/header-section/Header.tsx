@@ -1,12 +1,8 @@
-// Custom Components
-import Logo from "./Logo";
 import SectionsLinks from "./SectionsLinks";
 import SocialLinks from "./SocialLinks";
-
-// Utils
 import framerMotionComponents from "../../../utils/framerMotionComponents";
-const { motion } = framerMotionComponents;
 
+const { motion } = framerMotionComponents;
 const linkVariants = {
   hidden: { opacity: 0, y: -50 },
   visible: (i: number) => ({
@@ -18,12 +14,11 @@ const linkVariants = {
 
 const Header = () => {
   return (
-    <header className={`hero-theme min-h-[57px] pt-6 md:min-h-[80px]`}>
+    <header className={`hero-theme min-h-[57px] pt-4 md:min-h-[80px]`}>
       <div className="container">
-        <nav className="flex items-center justify-between text-sm text-[#fbfbfc99]">
-          <Logo />
+        <nav className="flex flex-row-reverse items-center gap-4 text-sm text-[#fbfbfc99] md:flex-row md:justify-between md:gap-0">
+          <SectionsLinks linkVariants={linkVariants} />
           <div className="flex flex-row-reverse items-center gap-7 md:flex-row">
-            <SectionsLinks linkVariants={linkVariants} />
             <motion.div
               variants={linkVariants}
               initial="hidden"

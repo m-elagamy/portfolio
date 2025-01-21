@@ -33,7 +33,7 @@ function SectionsLinks({ linkVariants }: SectionsLinksProps) {
 
   return (
     <>
-      <ul className="menu menu-horizontal hidden text-base md:flex">
+      <ul className="menu menu-horizontal hidden flex-grow justify-center text-base md:flex">
         {sections.map((section, index) => (
           <motion.li
             key={section}
