@@ -49,13 +49,13 @@ const HeroText = () => {
         >
           <motion.h1
             variants={itemVariants}
-            className="mx-auto mb-4 w-fit bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-xl font-bold tracking-widest text-transparent md:text-2xl"
+            className="mx-auto mb-4 w-fit bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text text-base font-medium tracking-widest text-transparent md:text-2xl"
           >
             HEY I AM
           </motion.h1>
           <motion.h1
             variants={itemVariants}
-            className="text-center text-2xl font-bold tracking-widest text-[#fbfbfc] md:text-4xl"
+            className="text-center text-lg font-bold tracking-widest text-[#fbfbfc] md:text-4xl"
           >
             MAHMOUD ELAGAMY
           </motion.h1>
@@ -72,7 +72,7 @@ const HeroText = () => {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-center text-[1.38rem] font-bold tracking-widest text-[#fbfbfc] md:text-4xl"
+            className="text-center text-lg font-bold tracking-widest text-[#fbfbfc] md:text-4xl"
           >
             A FRONT END DEVELOPER
           </motion.h1>

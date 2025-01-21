@@ -19,7 +19,7 @@ function Logo() {
       animate="visible"
       className="flex items-center gap-2"
     >
-      <span className="bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text font-mono text-2xl font-bold uppercase -tracking-wider text-transparent">
+      <span className="bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text font-mono text-xl font-bold uppercase tracking-wider text-transparent md:text-2xl">
         &lt;/&gt;
       </span>
       <span className="hidden text-base tracking-widest text-[#fbfbfc] md:block">
