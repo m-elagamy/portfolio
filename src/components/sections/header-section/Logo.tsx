@@ -1,14 +1,12 @@
-// Utils
 import framerMotionComponents from "../../../utils/framerMotionComponents";
 const { motion } = framerMotionComponents;
-import { CodeXml } from "lucide-react";
 
 const logoVariants = {
   hidden: { opacity: 0, y: -50 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut", delay: 0.4 },
+    transition: { duration: 0.6, ease: "easeOut", delay: 0.1 },
   },
 };
 
@@ -19,9 +17,14 @@ function Logo() {
       variants={logoVariants}
       initial="hidden"
       animate="visible"
+      className="flex items-center gap-2"
     >
-      <CodeXml className="size-6 text-[#3bb5e6] md:size-8" />
-      <span className="sr-only">Logo</span>
+      <span className="bg-gradient-to-r from-[#3bb5e6] to-[#fd47b4] bg-clip-text font-mono text-2xl font-bold uppercase -tracking-wider text-transparent">
+        &lt;/&gt;
+      </span>
+      <span className="hidden text-base tracking-widest text-[#fbfbfc] md:block">
+        AGAMY DEV
+      </span>
     </motion.a>
   );
 }
