@@ -48,7 +48,7 @@ export const projects = [
       },
     ],
     previewLink: "https://climatic-app.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-Elagamy/next.js-weather-app",
+    codeLink: "https://github.com/m-elagamy/climatic",
   },
   {
     id: 7,
@@ -85,7 +85,7 @@ export const projects = [
       },
     ],
     previewLink: "https://space-tourism-mpw.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-Elagamy/space-tourism-MPW",
+    codeLink: "https://github.com/m-elagamy/space-tourism-MPW",
   },
   {
     id: 1,
@@ -118,7 +118,7 @@ export const projects = [
       },
     ],
     previewLink: "https://multi-step-form-3.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-Elagamy/multi-step-form",
+    codeLink: "https://github.com/m-elagamy/multi-step-form",
   },
   {
     id: 2,
@@ -147,7 +147,7 @@ export const projects = [
     ],
 
     previewLink: "https://rest-countries-api-app2.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-Elagamy/rest-countries-app",
+    codeLink: "https://github.com/m-elagamy/rest-countries-app",
   },
   {
     id: 3,
@@ -176,7 +176,7 @@ export const projects = [
     ],
 
     previewLink: "https://react-do-app.netlify.app/",
-    codeLink: "https://github.com/Mahmoud-Elagamy/to-do-app",
+    codeLink: "https://github.com/m-elagamy/to-do-app",
   },
   {
     id: 4,
@@ -200,7 +200,7 @@ export const projects = [
     ],
 
     previewLink: "https://mahmoud-elagamy.github.io/Age-calculator-app/",
-    codeLink: "https://github.com/Mahmoud-Elagamy/Age-calculator-app",
+    codeLink: "https://github.com/m-elagamy/Age-calculator-app",
   },
   {
     id: 6,
@@ -224,6 +224,6 @@ export const projects = [
     ],
 
     previewLink: "https://mahmoud-elagamy.github.io/Quiz-App/",
-    codeLink: "https://github.com/Mahmoud-Elagamy/Quiz-App",
+    codeLink: "https://github.com/m-elagamy/Quiz-App",
   },
 ];

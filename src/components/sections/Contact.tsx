@@ -65,7 +65,7 @@ const Contact = () => {
             </li>
             <li>
               <a
-                href="https://github.com/Mahmoud-Elagamy"
+                href="https://github.com/m-elagamy"
                 className="group/item btn btn-ghost btn-sm pl-0 hover:scale-110 hover:bg-[#daa3a30a]"
                 target="_blank"
                 title="Github"

@@ -4,7 +4,7 @@ function SocialLinks() {
   return (
     <div>
       <SocialLink
-        link="https://github.com/Mahmoud-Elagamy"
+        link="https://github.com/m-elagamy"
         title="Github"
         icon={
           <svg
