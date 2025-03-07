@@ -199,8 +199,8 @@ export const projects = [
       },
     ],
 
-    previewLink: "https://mahmoud-elagamy.github.io/Age-calculator-app/",
-    codeLink: "https://github.com/m-elagamy/Age-calculator-app",
+    previewLink: "https://m-elagamy.github.io/age-calculator/",
+    codeLink: "https://github.com/m-elagamy/age-calculator",
   },
   {
     id: 6,
@@ -223,7 +223,7 @@ export const projects = [
       },
     ],
 
-    previewLink: "https://mahmoud-elagamy.github.io/Quiz-App/",
+    previewLink: "https://m-elagamy.github.io/Quiz-App/",
     codeLink: "https://github.com/m-elagamy/Quiz-App",
   },
 ];
