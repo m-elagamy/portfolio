@@ -44,7 +44,7 @@ const App = () => {
       {!isLoading && (
         <>
           <Header />
-          <main className="flex flex-col gap-16">
+          <main className="flex flex-col gap-24 md:gap-16">
             <Hero heroSectionRef={heroSectionRef} />
             <LazySection
               component={About}
@@ -59,7 +59,7 @@ const App = () => {
               fallback={<SectionLoadingIndicator />}
             />
           </main>
-          <footer className="pb-8">
+          <footer className="pb-4">
             <LazySection
               component={Contact}
               fallback={<SectionLoadingIndicator />}

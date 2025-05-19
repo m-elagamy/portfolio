@@ -9,9 +9,14 @@ const { motion, AnimatePresence } = framerMotionComponents;
 type AnimatedSectionProps = {
   children: ReactNode;
   sectionId: string;
+  className?: string;
 };
 
-const AnimatedSection = ({ children, sectionId }: AnimatedSectionProps) => {
+const AnimatedSection = ({
+  children,
+  sectionId,
+  className,
+}: AnimatedSectionProps) => {
   const sectionRef = useRef(null);
   const isVisible = useIntersectionObserver(sectionRef);
 
@@ -19,7 +24,7 @@ const AnimatedSection = ({ children, sectionId }: AnimatedSectionProps) => {
     <section
       ref={sectionRef}
       id={sectionId}
-      className="flex min-h-[60vh] scroll-mt-6 place-items-center text-center text-[#676767] md:grid lg:min-h-[80vh]"
+      className={`flex scroll-mt-6 place-items-center text-center text-[#676767] md:grid lg:min-h-[60vh] ${className}`}
     >
       <AnimatePresence>
         {isVisible && (
