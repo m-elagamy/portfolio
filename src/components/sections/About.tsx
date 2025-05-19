@@ -7,7 +7,7 @@ const { motion } = framerMotionComponents;
 
 const About = () => {
   return (
-    <AnimatedSection sectionId="about" className="md:mt-32">
+    <AnimatedSection sectionId="about" className="lg:mt-32">
       <h2 className="section-title">
         ABOUT ME <small>AGAMY</small>
       </h2>
